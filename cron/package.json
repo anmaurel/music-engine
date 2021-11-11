@@ -1,0 +1,20 @@
+{
+  "name": "node-cron",
+  "version": "1.0.0",
+  "description": "Cron tasks for MusicEngine app",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node index.js"
+  },
+  "author": "amaurel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "node-cron": "^3.0.0",
+    "sequelize": "^6.6.5"
+  }
+}

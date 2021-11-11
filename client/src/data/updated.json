@@ -1,0 +1,1269 @@
+[
+    {
+        "type": "table",
+        "name": "updated",
+        "database": "music_engine",
+        "data": [
+            {
+                "id": "1",
+                "followers": "2132903",
+                "createdAt": "2021-07-21 05:00:00",
+                "updatedAt": "2021-07-21 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "2",
+                "followers": "5423",
+                "createdAt": "2021-07-21 05:00:00",
+                "updatedAt": "2021-07-21 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "3",
+                "followers": "268301",
+                "createdAt": "2021-07-21 05:00:00",
+                "updatedAt": "2021-07-21 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "4",
+                "followers": "1262793",
+                "createdAt": "2021-07-21 05:00:00",
+                "updatedAt": "2021-07-21 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "5",
+                "followers": "494142",
+                "createdAt": "2021-07-21 05:00:00",
+                "updatedAt": "2021-07-21 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "6",
+                "followers": "854342",
+                "createdAt": "2021-07-21 05:00:00",
+                "updatedAt": "2021-07-21 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "7",
+                "followers": "2133936",
+                "createdAt": "2021-07-22 05:00:00",
+                "updatedAt": "2021-07-22 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "8",
+                "followers": "5447",
+                "createdAt": "2021-07-22 05:00:00",
+                "updatedAt": "2021-07-22 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "9",
+                "followers": "268328",
+                "createdAt": "2021-07-22 05:00:00",
+                "updatedAt": "2021-07-22 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "10",
+                "followers": "1262825",
+                "createdAt": "2021-07-22 05:00:00",
+                "updatedAt": "2021-07-22 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "11",
+                "followers": "494157",
+                "createdAt": "2021-07-22 05:00:00",
+                "updatedAt": "2021-07-22 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "12",
+                "followers": "854394",
+                "createdAt": "2021-07-22 05:00:00",
+                "updatedAt": "2021-07-22 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "303",
+                "followers": "494434",
+                "createdAt": "2021-07-23 05:00:00",
+                "updatedAt": "2021-07-23 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "304",
+                "followers": "268328",
+                "createdAt": "2021-07-23 05:00:00",
+                "updatedAt": "2021-07-23 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "305",
+                "followers": "854394",
+                "createdAt": "2021-07-23 05:00:00",
+                "updatedAt": "2021-07-23 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "306",
+                "followers": "1262825",
+                "createdAt": "2021-07-23 05:00:00",
+                "updatedAt": "2021-07-23 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "307",
+                "followers": "2135050",
+                "createdAt": "2021-07-23 05:00:00",
+                "updatedAt": "2021-07-23 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "308",
+                "followers": "5469",
+                "createdAt": "2021-07-23 05:00:01",
+                "updatedAt": "2021-07-23 05:00:01",
+                "artistId": "2"
+            },
+            {
+                "id": "309",
+                "followers": "5496",
+                "createdAt": "2021-07-24 05:00:00",
+                "updatedAt": "2021-07-24 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "310",
+                "followers": "2136134",
+                "createdAt": "2021-07-24 05:00:00",
+                "updatedAt": "2021-07-24 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "311",
+                "followers": "268556",
+                "createdAt": "2021-07-24 05:00:00",
+                "updatedAt": "2021-07-24 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "312",
+                "followers": "494753",
+                "createdAt": "2021-07-24 05:00:00",
+                "updatedAt": "2021-07-24 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "313",
+                "followers": "856240",
+                "createdAt": "2021-07-24 05:00:00",
+                "updatedAt": "2021-07-24 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "314",
+                "followers": "1267240",
+                "createdAt": "2021-07-24 05:00:00",
+                "updatedAt": "2021-07-24 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "315",
+                "followers": "2137240",
+                "createdAt": "2021-07-25 05:00:00",
+                "updatedAt": "2021-07-25 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "316",
+                "followers": "5514",
+                "createdAt": "2021-07-25 05:00:00",
+                "updatedAt": "2021-07-25 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "317",
+                "followers": "268646",
+                "createdAt": "2021-07-25 05:00:00",
+                "updatedAt": "2021-07-25 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "318",
+                "followers": "495066",
+                "createdAt": "2021-07-25 05:00:00",
+                "updatedAt": "2021-07-25 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "319",
+                "followers": "1269595",
+                "createdAt": "2021-07-25 05:00:00",
+                "updatedAt": "2021-07-25 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "320",
+                "followers": "857199",
+                "createdAt": "2021-07-25 05:00:00",
+                "updatedAt": "2021-07-25 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "321",
+                "followers": "268646",
+                "createdAt": "2021-07-26 05:00:01",
+                "updatedAt": "2021-07-26 05:00:01",
+                "artistId": "3"
+            },
+            {
+                "id": "322",
+                "followers": "2137240",
+                "createdAt": "2021-07-26 05:00:01",
+                "updatedAt": "2021-07-26 05:00:01",
+                "artistId": "1"
+            },
+            {
+                "id": "323",
+                "followers": "5514",
+                "createdAt": "2021-07-26 05:00:01",
+                "updatedAt": "2021-07-26 05:00:01",
+                "artistId": "2"
+            },
+            {
+                "id": "324",
+                "followers": "1269595",
+                "createdAt": "2021-07-26 05:00:01",
+                "updatedAt": "2021-07-26 05:00:01",
+                "artistId": "4"
+            },
+            {
+                "id": "325",
+                "followers": "495066",
+                "createdAt": "2021-07-26 05:00:01",
+                "updatedAt": "2021-07-26 05:00:01",
+                "artistId": "5"
+            },
+            {
+                "id": "326",
+                "followers": "857199",
+                "createdAt": "2021-07-26 05:00:01",
+                "updatedAt": "2021-07-26 05:00:01",
+                "artistId": "6"
+            },
+            {
+                "id": "327",
+                "followers": "268825",
+                "createdAt": "2021-07-27 05:00:00",
+                "updatedAt": "2021-07-27 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "328",
+                "followers": "5572",
+                "createdAt": "2021-07-27 05:00:00",
+                "updatedAt": "2021-07-27 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "329",
+                "followers": "1273914",
+                "createdAt": "2021-07-27 05:00:00",
+                "updatedAt": "2021-07-27 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "330",
+                "followers": "859159",
+                "createdAt": "2021-07-27 05:00:00",
+                "updatedAt": "2021-07-27 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "331",
+                "followers": "2139439",
+                "createdAt": "2021-07-27 05:00:00",
+                "updatedAt": "2021-07-27 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "332",
+                "followers": "495368",
+                "createdAt": "2021-07-27 05:00:00",
+                "updatedAt": "2021-07-27 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "333",
+                "followers": "2139439",
+                "createdAt": "2021-07-28 05:00:00",
+                "updatedAt": "2021-07-28 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "334",
+                "followers": "268825",
+                "createdAt": "2021-07-28 05:00:00",
+                "updatedAt": "2021-07-28 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "335",
+                "followers": "5572",
+                "createdAt": "2021-07-28 05:00:00",
+                "updatedAt": "2021-07-28 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "336",
+                "followers": "1273914",
+                "createdAt": "2021-07-28 05:00:00",
+                "updatedAt": "2021-07-28 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "337",
+                "followers": "495631",
+                "createdAt": "2021-07-28 05:00:00",
+                "updatedAt": "2021-07-28 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "338",
+                "followers": "859159",
+                "createdAt": "2021-07-28 05:00:00",
+                "updatedAt": "2021-07-28 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "339",
+                "followers": "268912",
+                "createdAt": "2021-07-29 05:00:00",
+                "updatedAt": "2021-07-29 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "340",
+                "followers": "2140693",
+                "createdAt": "2021-07-29 05:00:00",
+                "updatedAt": "2021-07-29 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "341",
+                "followers": "1276067",
+                "createdAt": "2021-07-29 05:00:00",
+                "updatedAt": "2021-07-29 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "342",
+                "followers": "860059",
+                "createdAt": "2021-07-29 05:00:00",
+                "updatedAt": "2021-07-29 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "343",
+                "followers": "5601",
+                "createdAt": "2021-07-29 05:00:00",
+                "updatedAt": "2021-07-29 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "344",
+                "followers": "495927",
+                "createdAt": "2021-07-29 05:00:00",
+                "updatedAt": "2021-07-29 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "345",
+                "followers": "1279890",
+                "createdAt": "2021-07-30 05:00:01",
+                "updatedAt": "2021-07-30 05:00:01",
+                "artistId": "4"
+            },
+            {
+                "id": "346",
+                "followers": "2142905",
+                "createdAt": "2021-07-30 05:00:01",
+                "updatedAt": "2021-07-30 05:00:01",
+                "artistId": "1"
+            },
+            {
+                "id": "347",
+                "followers": "861656",
+                "createdAt": "2021-07-30 05:00:01",
+                "updatedAt": "2021-07-30 05:00:01",
+                "artistId": "6"
+            },
+            {
+                "id": "348",
+                "followers": "496527",
+                "createdAt": "2021-07-30 05:00:01",
+                "updatedAt": "2021-07-30 05:00:01",
+                "artistId": "5"
+            },
+            {
+                "id": "349",
+                "followers": "269083",
+                "createdAt": "2021-07-30 05:00:01",
+                "updatedAt": "2021-07-30 05:00:01",
+                "artistId": "3"
+            },
+            {
+                "id": "350",
+                "followers": "5645",
+                "createdAt": "2021-07-30 05:00:01",
+                "updatedAt": "2021-07-30 05:00:01",
+                "artistId": "2"
+            },
+            {
+                "id": "351",
+                "followers": "1281900",
+                "createdAt": "2021-07-31 05:00:00",
+                "updatedAt": "2021-07-31 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "352",
+                "followers": "5680",
+                "createdAt": "2021-07-31 05:00:00",
+                "updatedAt": "2021-07-31 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "353",
+                "followers": "2144054",
+                "createdAt": "2021-07-31 05:00:00",
+                "updatedAt": "2021-07-31 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "354",
+                "followers": "496527",
+                "createdAt": "2021-07-31 05:00:00",
+                "updatedAt": "2021-07-31 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "355",
+                "followers": "862508",
+                "createdAt": "2021-07-31 05:00:00",
+                "updatedAt": "2021-07-31 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "356",
+                "followers": "269159",
+                "createdAt": "2021-07-31 05:00:00",
+                "updatedAt": "2021-07-31 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "357",
+                "followers": "269159",
+                "createdAt": "2021-08-01 05:00:01",
+                "updatedAt": "2021-08-01 05:00:01",
+                "artistId": "3"
+            },
+            {
+                "id": "358",
+                "followers": "497090",
+                "createdAt": "2021-08-01 05:00:01",
+                "updatedAt": "2021-08-01 05:00:01",
+                "artistId": "5"
+            },
+            {
+                "id": "359",
+                "followers": "2145220",
+                "createdAt": "2021-08-01 05:00:01",
+                "updatedAt": "2021-08-01 05:00:01",
+                "artistId": "1"
+            },
+            {
+                "id": "360",
+                "followers": "5680",
+                "createdAt": "2021-08-01 05:00:01",
+                "updatedAt": "2021-08-01 05:00:01",
+                "artistId": "2"
+            },
+            {
+                "id": "361",
+                "followers": "863357",
+                "createdAt": "2021-08-01 05:00:01",
+                "updatedAt": "2021-08-01 05:00:01",
+                "artistId": "6"
+            },
+            {
+                "id": "362",
+                "followers": "1284040",
+                "createdAt": "2021-08-01 05:00:01",
+                "updatedAt": "2021-08-01 05:00:01",
+                "artistId": "4"
+            },
+            {
+                "id": "363",
+                "followers": "2146271",
+                "createdAt": "2021-08-02 05:00:00",
+                "updatedAt": "2021-08-02 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "364",
+                "followers": "5700",
+                "createdAt": "2021-08-02 05:00:00",
+                "updatedAt": "2021-08-02 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "365",
+                "followers": "497389",
+                "createdAt": "2021-08-02 05:00:00",
+                "updatedAt": "2021-08-02 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "366",
+                "followers": "269231",
+                "createdAt": "2021-08-02 05:00:00",
+                "updatedAt": "2021-08-02 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "367",
+                "followers": "863357",
+                "createdAt": "2021-08-02 05:00:00",
+                "updatedAt": "2021-08-02 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "368",
+                "followers": "1284040",
+                "createdAt": "2021-08-02 05:00:00",
+                "updatedAt": "2021-08-02 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "369",
+                "followers": "269389",
+                "createdAt": "2021-08-03 05:00:00",
+                "updatedAt": "2021-08-03 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "370",
+                "followers": "2147385",
+                "createdAt": "2021-08-03 05:00:00",
+                "updatedAt": "2021-08-03 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "371",
+                "followers": "1288106",
+                "createdAt": "2021-08-03 05:00:00",
+                "updatedAt": "2021-08-03 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "372",
+                "followers": "5728",
+                "createdAt": "2021-08-03 05:00:00",
+                "updatedAt": "2021-08-03 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "373",
+                "followers": "865036",
+                "createdAt": "2021-08-03 05:00:00",
+                "updatedAt": "2021-08-03 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "374",
+                "followers": "497658",
+                "createdAt": "2021-08-03 05:00:00",
+                "updatedAt": "2021-08-03 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "375",
+                "followers": "269389",
+                "createdAt": "2021-08-04 05:00:00",
+                "updatedAt": "2021-08-04 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "376",
+                "followers": "5728",
+                "createdAt": "2021-08-04 05:00:00",
+                "updatedAt": "2021-08-04 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "377",
+                "followers": "2147385",
+                "createdAt": "2021-08-04 05:00:00",
+                "updatedAt": "2021-08-04 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "378",
+                "followers": "1288106",
+                "createdAt": "2021-08-04 05:00:00",
+                "updatedAt": "2021-08-04 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "379",
+                "followers": "865036",
+                "createdAt": "2021-08-04 05:00:00",
+                "updatedAt": "2021-08-04 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "380",
+                "followers": "497658",
+                "createdAt": "2021-08-04 05:00:00",
+                "updatedAt": "2021-08-04 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "381",
+                "followers": "269556",
+                "createdAt": "2021-08-05 05:00:00",
+                "updatedAt": "2021-08-05 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "382",
+                "followers": "2149795",
+                "createdAt": "2021-08-05 05:00:00",
+                "updatedAt": "2021-08-05 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "383",
+                "followers": "1290100",
+                "createdAt": "2021-08-05 05:00:00",
+                "updatedAt": "2021-08-05 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "384",
+                "followers": "498273",
+                "createdAt": "2021-08-05 05:00:00",
+                "updatedAt": "2021-08-05 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "385",
+                "followers": "5763",
+                "createdAt": "2021-08-05 05:00:00",
+                "updatedAt": "2021-08-05 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "386",
+                "followers": "865860",
+                "createdAt": "2021-08-05 05:00:00",
+                "updatedAt": "2021-08-05 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "387",
+                "followers": "1292262",
+                "createdAt": "2021-08-06 05:00:00",
+                "updatedAt": "2021-08-06 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "388",
+                "followers": "866764",
+                "createdAt": "2021-08-06 05:00:00",
+                "updatedAt": "2021-08-06 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "389",
+                "followers": "2149795",
+                "createdAt": "2021-08-06 05:00:00",
+                "updatedAt": "2021-08-06 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "390",
+                "followers": "5763",
+                "createdAt": "2021-08-06 05:00:00",
+                "updatedAt": "2021-08-06 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "391",
+                "followers": "269556",
+                "createdAt": "2021-08-06 05:00:00",
+                "updatedAt": "2021-08-06 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "392",
+                "followers": "498273",
+                "createdAt": "2021-08-06 05:00:00",
+                "updatedAt": "2021-08-06 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "393",
+                "followers": "269741",
+                "createdAt": "2021-08-07 05:00:00",
+                "updatedAt": "2021-08-07 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "394",
+                "followers": "5795",
+                "createdAt": "2021-08-07 05:00:00",
+                "updatedAt": "2021-08-07 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "395",
+                "followers": "2152295",
+                "createdAt": "2021-08-07 05:00:00",
+                "updatedAt": "2021-08-07 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "396",
+                "followers": "1296284",
+                "createdAt": "2021-08-07 05:00:00",
+                "updatedAt": "2021-08-07 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "397",
+                "followers": "868545",
+                "createdAt": "2021-08-07 05:00:00",
+                "updatedAt": "2021-08-07 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "398",
+                "followers": "498833",
+                "createdAt": "2021-08-07 05:00:00",
+                "updatedAt": "2021-08-07 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "399",
+                "followers": "269839",
+                "createdAt": "2021-08-08 05:00:00",
+                "updatedAt": "2021-08-08 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "400",
+                "followers": "1298359",
+                "createdAt": "2021-08-08 05:00:00",
+                "updatedAt": "2021-08-08 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "401",
+                "followers": "499088",
+                "createdAt": "2021-08-08 05:00:00",
+                "updatedAt": "2021-08-08 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "402",
+                "followers": "5809",
+                "createdAt": "2021-08-08 05:00:00",
+                "updatedAt": "2021-08-08 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "403",
+                "followers": "869414",
+                "createdAt": "2021-08-08 05:00:00",
+                "updatedAt": "2021-08-08 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "404",
+                "followers": "2153503",
+                "createdAt": "2021-08-08 05:00:00",
+                "updatedAt": "2021-08-08 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "405",
+                "followers": "269919",
+                "createdAt": "2021-08-09 05:00:01",
+                "updatedAt": "2021-08-09 05:00:01",
+                "artistId": "3"
+            },
+            {
+                "id": "406",
+                "followers": "1300192",
+                "createdAt": "2021-08-09 05:00:01",
+                "updatedAt": "2021-08-09 05:00:01",
+                "artistId": "4"
+            },
+            {
+                "id": "407",
+                "followers": "2154637",
+                "createdAt": "2021-08-09 05:00:01",
+                "updatedAt": "2021-08-09 05:00:01",
+                "artistId": "1"
+            },
+            {
+                "id": "408",
+                "followers": "5809",
+                "createdAt": "2021-08-09 05:00:01",
+                "updatedAt": "2021-08-09 05:00:01",
+                "artistId": "2"
+            },
+            {
+                "id": "409",
+                "followers": "499327",
+                "createdAt": "2021-08-09 05:00:01",
+                "updatedAt": "2021-08-09 05:00:01",
+                "artistId": "5"
+            },
+            {
+                "id": "410",
+                "followers": "870158",
+                "createdAt": "2021-08-09 05:00:01",
+                "updatedAt": "2021-08-09 05:00:01",
+                "artistId": "6"
+            },
+            {
+                "id": "411",
+                "followers": "269919",
+                "createdAt": "2021-08-10 05:00:00",
+                "updatedAt": "2021-08-10 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "412",
+                "followers": "1300192",
+                "createdAt": "2021-08-10 05:00:00",
+                "updatedAt": "2021-08-10 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "413",
+                "followers": "2154637",
+                "createdAt": "2021-08-10 05:00:00",
+                "updatedAt": "2021-08-10 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "414",
+                "followers": "870158",
+                "createdAt": "2021-08-10 05:00:00",
+                "updatedAt": "2021-08-10 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "415",
+                "followers": "499327",
+                "createdAt": "2021-08-10 05:00:00",
+                "updatedAt": "2021-08-10 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "416",
+                "followers": "5833",
+                "createdAt": "2021-08-10 05:00:00",
+                "updatedAt": "2021-08-10 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "417",
+                "followers": "2156948",
+                "createdAt": "2021-08-11 05:00:00",
+                "updatedAt": "2021-08-11 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "418",
+                "followers": "270073",
+                "createdAt": "2021-08-11 05:00:00",
+                "updatedAt": "2021-08-11 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "419",
+                "followers": "1304131",
+                "createdAt": "2021-08-11 05:00:00",
+                "updatedAt": "2021-08-11 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "420",
+                "followers": "5846",
+                "createdAt": "2021-08-11 05:00:00",
+                "updatedAt": "2021-08-11 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "421",
+                "followers": "870946",
+                "createdAt": "2021-08-11 05:00:00",
+                "updatedAt": "2021-08-11 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "422",
+                "followers": "499832",
+                "createdAt": "2021-08-11 05:00:00",
+                "updatedAt": "2021-08-11 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "423",
+                "followers": "270073",
+                "createdAt": "2021-08-12 05:00:00",
+                "updatedAt": "2021-08-12 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "424",
+                "followers": "1304131",
+                "createdAt": "2021-08-12 05:00:00",
+                "updatedAt": "2021-08-12 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "425",
+                "followers": "2156948",
+                "createdAt": "2021-08-12 05:00:00",
+                "updatedAt": "2021-08-12 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "426",
+                "followers": "5865",
+                "createdAt": "2021-08-12 05:00:00",
+                "updatedAt": "2021-08-12 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "427",
+                "followers": "499832",
+                "createdAt": "2021-08-12 05:00:00",
+                "updatedAt": "2021-08-12 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "428",
+                "followers": "871716",
+                "createdAt": "2021-08-12 05:00:00",
+                "updatedAt": "2021-08-12 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "429",
+                "followers": "270161",
+                "createdAt": "2021-08-13 05:00:00",
+                "updatedAt": "2021-08-13 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "430",
+                "followers": "5885",
+                "createdAt": "2021-08-13 05:00:00",
+                "updatedAt": "2021-08-13 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "431",
+                "followers": "2158053",
+                "createdAt": "2021-08-13 05:00:00",
+                "updatedAt": "2021-08-13 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "432",
+                "followers": "1306239",
+                "createdAt": "2021-08-13 05:00:00",
+                "updatedAt": "2021-08-13 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "433",
+                "followers": "500074",
+                "createdAt": "2021-08-13 05:00:00",
+                "updatedAt": "2021-08-13 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "434",
+                "followers": "872445",
+                "createdAt": "2021-08-13 05:00:00",
+                "updatedAt": "2021-08-13 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "435",
+                "followers": "874073",
+                "createdAt": "2021-08-14 05:00:00",
+                "updatedAt": "2021-08-14 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "436",
+                "followers": "270331",
+                "createdAt": "2021-08-14 05:00:00",
+                "updatedAt": "2021-08-14 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "437",
+                "followers": "1308436",
+                "createdAt": "2021-08-14 05:00:00",
+                "updatedAt": "2021-08-14 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "438",
+                "followers": "5924",
+                "createdAt": "2021-08-14 05:00:00",
+                "updatedAt": "2021-08-14 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "439",
+                "followers": "2160331",
+                "createdAt": "2021-08-14 05:00:00",
+                "updatedAt": "2021-08-14 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "440",
+                "followers": "500621",
+                "createdAt": "2021-08-14 05:00:00",
+                "updatedAt": "2021-08-14 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "441",
+                "followers": "2160331",
+                "createdAt": "2021-08-15 05:00:00",
+                "updatedAt": "2021-08-15 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "442",
+                "followers": "5924",
+                "createdAt": "2021-08-15 05:00:00",
+                "updatedAt": "2021-08-15 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "443",
+                "followers": "270331",
+                "createdAt": "2021-08-15 05:00:00",
+                "updatedAt": "2021-08-15 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "444",
+                "followers": "1310696",
+                "createdAt": "2021-08-15 05:00:00",
+                "updatedAt": "2021-08-15 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "445",
+                "followers": "500621",
+                "createdAt": "2021-08-15 05:00:00",
+                "updatedAt": "2021-08-15 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "446",
+                "followers": "874073",
+                "createdAt": "2021-08-15 05:00:00",
+                "updatedAt": "2021-08-15 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "447",
+                "followers": "5952",
+                "createdAt": "2021-08-16 05:00:00",
+                "updatedAt": "2021-08-16 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "448",
+                "followers": "1315328",
+                "createdAt": "2021-08-16 05:00:00",
+                "updatedAt": "2021-08-16 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "449",
+                "followers": "270411",
+                "createdAt": "2021-08-16 05:00:00",
+                "updatedAt": "2021-08-16 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "450",
+                "followers": "875726",
+                "createdAt": "2021-08-16 05:00:00",
+                "updatedAt": "2021-08-16 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "451",
+                "followers": "501214",
+                "createdAt": "2021-08-16 05:00:00",
+                "updatedAt": "2021-08-16 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "452",
+                "followers": "2161609",
+                "createdAt": "2021-08-16 05:00:00",
+                "updatedAt": "2021-08-16 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "453",
+                "followers": "270578",
+                "createdAt": "2021-08-17 05:00:00",
+                "updatedAt": "2021-08-17 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "454",
+                "followers": "2164040",
+                "createdAt": "2021-08-17 05:00:00",
+                "updatedAt": "2021-08-17 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "455",
+                "followers": "5971",
+                "createdAt": "2021-08-17 05:00:00",
+                "updatedAt": "2021-08-17 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "456",
+                "followers": "1317694",
+                "createdAt": "2021-08-17 05:00:00",
+                "updatedAt": "2021-08-17 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "457",
+                "followers": "501525",
+                "createdAt": "2021-08-17 05:00:00",
+                "updatedAt": "2021-08-17 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "458",
+                "followers": "875726",
+                "createdAt": "2021-08-17 05:00:00",
+                "updatedAt": "2021-08-17 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "459",
+                "followers": "270578",
+                "createdAt": "2021-08-18 05:00:00",
+                "updatedAt": "2021-08-18 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "460",
+                "followers": "1320065",
+                "createdAt": "2021-08-18 05:00:00",
+                "updatedAt": "2021-08-18 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "461",
+                "followers": "5990",
+                "createdAt": "2021-08-18 05:00:00",
+                "updatedAt": "2021-08-18 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "462",
+                "followers": "877451",
+                "createdAt": "2021-08-18 05:00:00",
+                "updatedAt": "2021-08-18 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "463",
+                "followers": "2165283",
+                "createdAt": "2021-08-18 05:00:00",
+                "updatedAt": "2021-08-18 05:00:00",
+                "artistId": "1"
+            },
+            {
+                "id": "464",
+                "followers": "501839",
+                "createdAt": "2021-08-18 05:00:00",
+                "updatedAt": "2021-08-18 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "465",
+                "followers": "270781",
+                "createdAt": "2021-08-19 05:00:00",
+                "updatedAt": "2021-08-19 05:00:00",
+                "artistId": "3"
+            },
+            {
+                "id": "466",
+                "followers": "1322335",
+                "createdAt": "2021-08-19 05:00:00",
+                "updatedAt": "2021-08-19 05:00:00",
+                "artistId": "4"
+            },
+            {
+                "id": "467",
+                "followers": "6008",
+                "createdAt": "2021-08-19 05:00:00",
+                "updatedAt": "2021-08-19 05:00:00",
+                "artistId": "2"
+            },
+            {
+                "id": "468",
+                "followers": "502149",
+                "createdAt": "2021-08-19 05:00:00",
+                "updatedAt": "2021-08-19 05:00:00",
+                "artistId": "5"
+            },
+            {
+                "id": "469",
+                "followers": "878319",
+                "createdAt": "2021-08-19 05:00:00",
+                "updatedAt": "2021-08-19 05:00:00",
+                "artistId": "6"
+            },
+            {
+                "id": "470",
+                "followers": "2166578",
+                "createdAt": "2021-08-19 05:00:01",
+                "updatedAt": "2021-08-19 05:00:01",
+                "artistId": "1"
+            }
+        ]
+    }
+]
