@@ -128,16 +128,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss">
-@import "@/assets/styles/main.scss";
-
-#app {
-    font-family: "Poppins", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    font-size: $size-normal;
-    color: $light !important;
-}
-</style>

@@ -1,6 +1,14 @@
 html {
     background-color: $dark !important;
 }
+#app {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-size: $size-normal;
+    color: $light !important;
+}
 .hero.is-dark {
     background-color: $dark;
     color: $light;
