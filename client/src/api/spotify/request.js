@@ -31,11 +31,8 @@ req.interceptors.response.use(
     },
     async (error) => {
         const { status, data } = error.response;
-        const originalConfig = error.config;
 
-        if (status === 401 && !originalConfig._retry) {
-            originalConfig._retry = true;
-
+        if (status === 401) {
             try {
                 store.dispatch("auth/refreshToken");
             } catch (_error) {

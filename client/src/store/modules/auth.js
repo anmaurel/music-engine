@@ -36,9 +36,9 @@ const mutations = {
 const actions = {
     refreshToken: async ({ commit, state, dispatch }) => {
         try {
-            if (state.refreshToken) {
+            if (localStorage.getItem("spotify_refresh_token")) {
                 const response = await api.auth.getRefreshTokenUrl(
-                    state.refreshToken
+                    localStorage.getItem("spotify_refresh_token")
                 );
                 commit("SET_ACCESS_TOKEN", response.data.access_token);
 
@@ -57,9 +57,9 @@ const actions = {
         script.src = "https://www.spotify.com/logout/";
         document.getElementById("app").appendChild(script);
 
-        localStorage.removeItem('spotify_access_token');
-        localStorage.removeItem('spotify_refresh_token');
-        localStorage.removeItem('spotify_expiry_time');
+        localStorage.removeItem("spotify_access_token");
+        localStorage.removeItem("spotify_refresh_token");
+        localStorage.removeItem("spotify_expiry_time");
 
         state.isAuth = false;
 
