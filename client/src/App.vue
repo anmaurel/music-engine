@@ -80,7 +80,7 @@
                                 <button
                                     class="
                                         button
-                                        has-background-gradient-1 has-text-black
+                                        has-background-gradient-1 has-text-white
                                     "
                                 >
                                     <i class="fab fa-spotify mr-2"></i>
