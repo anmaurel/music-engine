@@ -72,11 +72,7 @@
                             </button>
                         </a>
                         <div v-else class="navbar-item">
-                            <!-- <img class="is-b-rounded mr-2" :src="userInfo[0]['images'][0]['url']" />
-                            <h1 class="is-primary has-text-weight-semibold mr-3">
-                                {{ userInfo[0]['display_name'] }}
-                            </h1> -->
-                            <router-link class="navbar-item" to="/devices"
+                            <router-link class="navbar-item has-text-white" to="/devices"
                                 ><i class="fas fa-laptop-house mr-2"></i
                                 >Devices</router-link
                             >
@@ -84,7 +80,7 @@
                                 <button
                                     class="
                                         button
-                                        has-background-gradient-1 has-text-white
+                                        has-background-gradient-1 has-text-black
                                     "
                                 >
                                     <i class="fab fa-spotify mr-2"></i>

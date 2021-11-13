@@ -14,7 +14,9 @@ html {
     color: $light;
 }
 .button {
-    border-width: 2px !important;
+    border-width: 1px !important;
+    border-color: black !important;
+    background-color: transparent !important;
 }
 .is-b-rounded {
     border-radius: 50%;
@@ -32,7 +34,8 @@ html {
     object-position: 50% 50%;
 }
 .has-background-gradient-1 {
-    background: linear-gradient(to right, $secondary 0%, $primary 100%);
+    // background: linear-gradient(to right, $secondary 0%, $primary 100%);
+    background: linear-gradient(to right, rgba(230, 125, 0, 0.6), rgba(233, 72, 108, 0.6));
 }
 .has-text-gradient-1 {
     background: linear-gradient(to right, $secondary 0%, $primary 100%);

@@ -1,26 +1,26 @@
-name: Deploy
+# name: Deploy
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
 
-jobs:
+# jobs:
 
-  deploy:
-    runs-on: ubuntu-latest
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Init
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Init
+#         uses: actions/checkout@v2
 
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{secrets.NAS_SSH_HOST}}
-          username: ${{ secrets.NAS_SSH_USERNAME }}
-          password: ${{ secrets.NAS_SSH_PASSWORD }}
-          script: |
-            cd www/music-engine
-            git pull
-            sudo docker-compose up -d --build --force-recreate
+#       - name: Deploy to server
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{secrets.NAS_SSH_HOST}}
+#           username: ${{ secrets.NAS_SSH_USERNAME }}
+#           password: ${{ secrets.NAS_SSH_PASSWORD }}
+#           script: |
+#             cd www/music-engine
+#             git pull
+#             sudo docker-compose up -d --build --force-recreate
