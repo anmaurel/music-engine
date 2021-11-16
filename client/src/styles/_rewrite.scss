@@ -1,5 +1,7 @@
 html {
     background-color: $dark !important;
+    background-image: url("./../assets/img/texture.png");
+    z-index: 1;
 }
 #app {
     font-family: "Poppins", sans-serif;
@@ -8,10 +10,6 @@ html {
     text-align: center;
     font-size: $size-normal;
     color: $light !important;
-}
-.hero.is-dark {
-    background-color: $dark;
-    color: $light;
 }
 .button {
     border-width: 1px !important;
@@ -27,7 +25,7 @@ html {
     object-position: 50% 50%;
 }
 .is-b-rounded-home {
-    border: 2px solid #E9486C;
+    border: 2px solid #e9486c;
     height: 200px;
     width: auto;
     // object-fit: none;
@@ -35,19 +33,23 @@ html {
 }
 .has-background-gradient-1 {
     // background: linear-gradient(to right, $secondary 0%, $primary 100%);
-    background: linear-gradient(to right, rgba(230, 125, 0, 0.8), rgba(233, 72, 108, 0.8));
+    background: linear-gradient(
+        to right,
+        rgba(230, 125, 0, 0.8),
+        rgba(233, 72, 108, 0.8)
+    );
 }
 .has-text-gradient-1 {
     background: linear-gradient(to right, $secondary 0%, $primary 100%);
     background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .hero.is-fullheight-with-navbar {
-    min-height: calc(100vh - 15rem) !important;
+    min-height: calc(100vh - 4.1rem) !important;
 }
-.border-card{
-    border: 2px solid #E9486C !important;
+.border-card {
+    border: 2px solid #e9486c !important;
 }
 .title-margin {
     margin-bottom: 5px !important;
@@ -56,5 +58,5 @@ html {
     min-height: 220px;
     display: flex !important;
     align-items: center;
-    background-color: #0E1121;
+    background-color: #0e1121;
 }

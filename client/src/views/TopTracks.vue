@@ -1,19 +1,24 @@
 <template>
-    <div class="top-tracks">
-        <h1 class="title is-size-1">Top tracks</h1>
-        <p class="subtitle has-text-weight-light">
-            The top 20 most listened tracks displayed by spotify popularity
-        </p>
-        <ECharts
-            v-if="ready"
-            ref="chart"
-            :option="options"
-            :setOptionOpts="{ notMerge: true }"
-            :loading="loading"
-            :loadingOpts="{ text: 'Wait for 0.5s' }"
-            style="width: 100%; height: 700px; margin: 0 auto"
-        />
-    </div>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1 has-text-white">Top tracks</h1>
+                <p class="subtitle has-text-weight-light has-text-white">
+                    The top 20 most listened tracks displayed by spotify
+                    popularity
+                </p>
+                <ECharts
+                    v-if="ready"
+                    ref="chart"
+                    :option="options"
+                    :setOptionOpts="{ notMerge: true }"
+                    :loading="loading"
+                    :loadingOpts="{ text: 'Wait for 0.5s' }"
+                    style="width: 90%; height: 700px; margin: 0 auto"
+                />
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>

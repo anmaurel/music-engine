@@ -1,19 +1,23 @@
 <template>
-    <div class="recent-plays">
-        <h1 class="title is-size-1">Recent plays</h1>
-        <p class="subtitle has-text-weight-light">
-            The most present artists among the last 20 tracks listened
-        </p>
-        <ECharts
-            v-if="ready"
-            ref="chart"
-            :option="chartOptionsBar"
-            :setOptionOpts="{ notMerge: true }"
-            :loading="loading"
-            :loadingOpts="{ text: 'Wait for 0.5s' }"
-            style="width: 100%; height: 600px"
-        />
-    </div>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1 has-text-white">Recent plays</h1>
+                <p class="subtitle has-text-weight-light has-text-white">
+                    The most present artists among the last 20 tracks listened
+                </p>
+                <ECharts
+                    v-if="ready"
+                    ref="chart"
+                    :option="chartOptionsBar"
+                    :setOptionOpts="{ notMerge: true }"
+                    :loading="loading"
+                    :loadingOpts="{ text: 'Wait for 0.5s' }"
+                    style="width: 100%; height: 600px"
+                />
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>

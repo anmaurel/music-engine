@@ -1,21 +1,29 @@
-import { createApp, h } from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import axios from 'axios';
-import VueAxios from 'vue-axios';
-import LoadScript from 'vue-plugin-load-script';
-import * as echarts from 'echarts';
-import { plugin } from 'echarts-for-vue';
+import { createApp, h } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import axios from "axios";
+import VueAxios from "vue-axios";
+import LoadScript from "vue-plugin-load-script";
+import * as echarts from "echarts";
+import { plugin } from "echarts-for-vue";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+import { faFileMedical, faUser, faHistory, faLaptopHouse, faTabletAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+import { faFileAudio, faIdBadge, faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import "./styles/main.scss";
-import '@fortawesome/fontawesome-free/css/all.css';
-import '@fortawesome/fontawesome-free/js/all.js';
+
+library.add(faFileMedical, faPlayCircle, faUser, faFileAudio, faHistory, faSpotify, faLaptopHouse, faIdBadge, faTabletAlt);
 
 createApp(App)
+    .component("font-awesome-icon", FontAwesomeIcon)
     .use(store)
     .use(router)
     .use(VueAxios, axios)
     .use(LoadScript)
     .use(plugin, { echarts, h })
-    .mount('#app');
+    .mount("#app");

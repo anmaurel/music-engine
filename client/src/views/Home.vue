@@ -1,9 +1,37 @@
 <template>
-    <div class="home pb-6 mb-6">
-        <section class="hero">
+    <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container mb-6">
+                <img
+                    src="@/assets/img/logo.svg"
+                    alt="Logo"
+                    style="width: 45%; margin: 0 auto"
+                />
+            </div>
+        </div>
+        <div class="hero-foot">
+            <p class="is-size-7 has-text-weight-light pb-4">scroll</p>
+            <div class="scroll-bar"></div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop mt-4">
+                <p class="is-size-5 has-text-weight-light has-text-justified">
+                        Music Engine is a platform where you can find all kinds
+                        of statistics about users and artists on Spotify,
+                        displayed in graphical form for better visualisation.
+                        Music Engine also allows you to follow the evolution of
+                        the artists' statistics and their songs as an innovative
+                        graphical.
+                    </p>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="hero">
             <div class="hero-head mb-6">
                 <img
-                    src="@/assets/img/logo10.svg"
+                    src="@/assets/img/logo.svg"
                     alt="Logo"
                     style="width: 45%; margin: 0 auto"
                 />
@@ -159,8 +187,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </section> -->
 </template>
 
 <script>
