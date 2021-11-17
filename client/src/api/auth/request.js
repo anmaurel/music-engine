@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const req = axios.create({
-    baseURL: "http://localhost:9000",
+    baseURL: `${process.env.BACK_URL}`
 });
 
 export default req;
