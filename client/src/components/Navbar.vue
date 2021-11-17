@@ -117,7 +117,7 @@ export default {
     data() {
         return {
             showNav: false,
-            loginUrl: "http://localhost:9000/login",
+            loginUrl: `${process.env.BACK_URL}/login`,
         };
     },
     computed: {
