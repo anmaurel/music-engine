@@ -18,23 +18,23 @@ services:
         build: ./server
         ports:
             - 9000:9000
-        # networks:
-        #     default:
-        #         ipv4_address: 192.168.1.84
+        networks:
+            default:
+                ipv4_address: 192.168.1.84
         restart: on-failure
 
     vue-client:
         container_name: musicEngine-client
         build: ./client
         ports:
-            - 3000:8080
-        # networks:
-        #     default:
-        #         ipv4_address: 192.168.1.83
+            - 8080:8080
+        networks:
+            default:
+                ipv4_address: 192.168.1.83
         volumes:
             - ./nginx/conf.d:/etc/nginx/conf.d
         
-# networks:
-#     default:
-#         external:
-#             name: macvlan
+networks:
+    default:
+        external:
+            name: macvlan
