@@ -1,7 +1,7 @@
 version: '3.7'
 services:
     # node-cron:
-    #     container_name: musicEngine-cron
+    #     container_name: music-engine_cron
     #     build: ./cron
     #     command: bash -c "npm install && npm run serve"
     #     ports:
@@ -14,7 +14,7 @@ services:
     #         - /app/node_modules
 
     node-server:
-        container_name: musicEngine-server
+        container_name: music-engine_server
         build: ./server
         ports:
             - 9000:9000
@@ -24,7 +24,7 @@ services:
         restart: on-failure
 
     vue-client:
-        container_name: musicEngine-client
+        container_name: music-engine_client
         build: ./client
         ports:
             - 8080:8080
