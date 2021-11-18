@@ -117,7 +117,7 @@ export default {
     data() {
         return {
             showNav: false,
-            loginUrl: `${import.meta.env.VITE_URL}/login`,
+            loginUrl: `${import.meta.env.VITE_BACK_URL}/login`,
         };
     },
     computed: {
