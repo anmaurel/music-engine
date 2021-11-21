@@ -30,4 +30,25 @@ export default {
     getDevices: () => {
         return req.get("/me/player/devices");
     },
+    getArtist: (id) => {
+        return req.get(`/artists/${id}`);
+    },
+    getRecommendations: (limit, seed_artists, seed_genres, seed_tracks) => {
+        return req.get("/recommendations", {
+            params: {
+                limit,
+                seed_artists,
+                seed_genres,
+                seed_tracks
+            },
+        });
+    },
+    createPlaylist: (user_id, name, description) => {
+        return req.post(`/users/${user_id}/playlists`, {
+            params: {
+                name,
+                description
+            },
+        });
+    },
 };

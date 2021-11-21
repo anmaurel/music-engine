@@ -6,6 +6,8 @@ const state = {
     recentlyPlayed: "",
     topArtists: "",
     topTracks: "",
+    artist: "",
+    recommendations: "",
 };
 
 const getters = {
@@ -14,6 +16,8 @@ const getters = {
     getRecentlyPlayed: (state) => state.recentlyPlayed,
     getTopArtists: (state) => state.topArtists,
     getTopTracks: (state) => state.topTracks,
+    getArtist: (state) => state.artist,
+    getRecommendations: (state) => state.recommendations,
 };
 
 const mutations = {
@@ -31,6 +35,12 @@ const mutations = {
     },
     SET_TOP_TRACKS(state, tracks) {
         state.topTracks = tracks;
+    },
+    SET_ARTIST(state, artist) {
+        state.artist = artist;
+    },
+    SET_RECOMMENDATIONS(state, recommendations) {
+        state.recommendations = recommendations;
     },
 };
 
@@ -59,7 +69,7 @@ const actions = {
             console.log(error);
         }
     },
-    async getTopArtists({ commit }, limit, time_range) {
+    async getTopArtists({ commit }, { limit, time_range }) {
         try {
             const response = await api.spotify.getTopArtists(limit, time_range);
             commit("SET_TOP_ARTISTS", response.data);
@@ -67,10 +77,26 @@ const actions = {
             console.log(error);
         }
     },
-    async getTopTracks({ commit }, limit, time_range) {
+    async getTopTracks({ commit }, { limit, time_range }) {
         try {
             const response = await api.spotify.getTopTracks(limit, time_range);
             commit("SET_TOP_TRACKS", response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    async getArtist({ commit }, id) {
+        try {
+            const response = await api.spotify.getArtist(id);
+            commit("SET_ARTIST", response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    async getRecommendations({ commit }, { limit, seed_artists, seed_genres, seed_tracks }) {
+        try {
+            const response = await api.spotify.getRecommendations(limit, seed_artists, seed_genres, seed_tracks);
+            commit("SET_RECOMMENDATIONS", response.data);
         } catch (error) {
             console.log(error);
         }
