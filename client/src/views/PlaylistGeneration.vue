@@ -5,9 +5,77 @@
                 <h1 class="title is-size-1 has-text-white">
                     Playlist generation
                 </h1>
-                <p class="subtitle has-text-weight-light has-text-white">...</p>
-                <div>
-                    <!-- {{ recentlyPlayed.items[0] }} -->
+                <p class="subtitle has-text-weight-light has-text-white">
+                    Generate a playlist from recently played tracks.
+                </p>
+                <div class="mt-6" v-if="playlistGenStatus == 'p1'">
+                    <button
+                        id="btnGenerate"
+                        class="
+                            button
+                            is-large
+                            has-background-gradient-1
+                            has-text-weight-medium
+                            has-text-white
+                        "
+                        @click="generateRecommendations()"
+                    >
+                        Generate
+                    </button>
+                </div>
+                <div class="m-6" v-if="playlistGenStatus == 'p2'">
+                    <div class="columns is-multiline is-mobile">
+                        <div
+                            class="column is-1"
+                            v-for="track in recommendations.tracks"
+                            :key="track.id"
+                        >
+                            <a class="box" :href="track.uri">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img
+                                                :src="track.album.images[1].url"
+                                                alt="Placeholder image"
+                                            />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="columns is-mobile is-centered mt-5">
+                        <div class="column is-narrow field">
+                            <!-- <label class="label has-text-white"
+                                >Playlist name</label
+                            > -->
+                            <div class="control">
+                                <input
+                                    v-model="playlistName"
+                                    class="input is-medium is-success"
+                                    type="text has-text-weight-light"
+                                    placeholder="playlist name"
+                                />
+                            </div>
+                        </div>
+                        <div class="column is-narrow field">
+                            <p class="control">
+                                <button
+                                    id="btnCreate"
+                                    class="
+                                        button
+                                        is-medium
+                                        has-background-gradient-1
+                                        has-text-weight-medium
+                                        has-text-white
+                                    "
+                                    @click="createPlaylist(playlistName)"
+                                >
+                                    Create playlist
+                                </button>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -19,15 +87,26 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
     name: "PlaylistGeneration",
+    data() {
+        return {
+            playlistName: "",
+        };
+    },
     computed: {
         ...mapGetters("spotify", {
             recentlyPlayed: "getRecentlyPlayed",
             artist: "getArtist",
             recommendations: "getRecommendations",
+            playlistGenStatus: "getPlaylistGenStatus",
+            userAuthProfile: "getProfile",
         }),
     },
     methods: {
-        async formatData() {
+        async generateRecommendations() {
+            const btnGenerate = document.getElementById("btnGenerate");
+            btnGenerate.setAttribute("disabled", "");
+            btnGenerate.classList.add("is-loading");
+
             await this.$store.dispatch("spotify/getRecentlyPlayed", 20);
 
             let tracks = [],
@@ -60,18 +139,40 @@ export default {
 
             const tracksShuffled = tracks.sort(() => 0.5 - Math.random());
             const params = {
-                limit: 10,
+                limit: 24,
                 seed_artists: "",
                 seed_genres: "",
                 seed_tracks: tracks.slice(0, 5).join(),
             };
-            
+
             await this.$store.dispatch("spotify/getRecommendations", params);
-            console.log(this.recommendations);
+
+            await this.$store.dispatch("spotify/setPlaylistGenStatus", "p2");
         },
-    },
-    mounted() {
-        this.formatData();
+        async createPlaylist(playlistName) {
+            const btnGenerate = document.getElementById("btnCreate");
+            btnGenerate.setAttribute("disabled", "");
+            btnGenerate.classList.add("is-loading");
+
+            await this.$store.dispatch("spotify/getProfile");
+
+            const newPlaylist = await this.$store.dispatch("spotify/createPlaylist", {
+                user_id: this.userAuthProfile.id,
+                name: playlistName,
+            });
+
+            let uris = [];
+            this.recommendations.tracks.forEach(track => {
+                uris.push(track.uri);
+            });
+
+            await this.$store.dispatch("spotify/addItemsPlaylist", {
+                playlist_id: newPlaylist.id,
+                uris: uris,
+            });
+
+            window.location.reload();
+        },
     },
 };
 </script>

@@ -43,12 +43,14 @@ export default {
             },
         });
     },
-    createPlaylist: (user_id, name, description) => {
+    createPlaylist: (user_id, name) => {
         return req.post(`/users/${user_id}/playlists`, {
-            params: {
-                name,
-                description
-            },
+            name: name,
+        });
+    },
+    addItemsPlaylist: (playlist_id, uris) => {
+        return req.post(`/playlists/${playlist_id}/tracks`, {
+            uris: uris,
         });
     },
 };
