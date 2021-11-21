@@ -133,7 +133,8 @@ export default {
         },
     },
     async mounted() {
-        await this.$store.dispatch("spotify/getTopTracks", 20, "long_term");
+        const params = { limit: 20, time_range: "long_term"}
+        await this.$store.dispatch("spotify/getTopTracks", params);
         this.resetContent();
         this.setupTopTracks();
     },

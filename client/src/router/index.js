@@ -6,6 +6,7 @@ import TopTracks from "@/views/TopTracks.vue";
 import Devices from "@/views/Devices.vue";
 import NotFound from "@/views/NotFound.vue";
 import HistoricalArtists from "@/views/HistoricalArtists.vue";
+import PlaylistGeneration from "@/views/PlaylistGeneration.vue";
 
 const routes = [
     {
@@ -41,6 +42,12 @@ const routes = [
         path: "/historical-artists",
         name: "HistoricalArtists",
         component: HistoricalArtists,
+        meta: { requiresAuth: true },
+    },
+    {
+        path: "/playlist-generation",
+        name: "PlaylistGeneration",
+        component: PlaylistGeneration,
         meta: { requiresAuth: true },
     },
     {
