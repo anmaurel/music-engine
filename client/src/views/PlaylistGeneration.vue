@@ -6,7 +6,8 @@
                     Playlist generation
                 </h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    Generate a playlist with tracks inspired by recently played tracks.
+                    Generate a playlist with tracks inspired by recently played
+                    tracks.
                 </p>
                 <div class="mt-6" v-if="playlistGenStatus == 'p1'">
                     <button
@@ -85,6 +86,8 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 
+import router from "@/router";
+
 export default {
     name: "PlaylistGeneration",
     data() {
@@ -138,16 +141,15 @@ export default {
             });
 
             const tracksShuffled = tracks.sort(() => 0.5 - Math.random());
-            const params = {
+
+            await this.$store.dispatch("spotify/getRecommendations", {
                 limit: 24,
                 seed_artists: "",
                 seed_genres: "",
                 seed_tracks: tracks.slice(0, 5).join(),
-            };
+            });
 
-            await this.$store.dispatch("spotify/getRecommendations", params);
-
-            await this.$store.dispatch("spotify/setPlaylistGenStatus", "p2");
+            this.$store.dispatch("spotify/setPlaylistGenStatus", "p2");
         },
         async createPlaylist(playlistName) {
             const btnGenerate = document.getElementById("btnCreate");
@@ -156,13 +158,16 @@ export default {
 
             await this.$store.dispatch("spotify/getProfile");
 
-            const newPlaylist = await this.$store.dispatch("spotify/createPlaylist", {
-                user_id: this.userAuthProfile.id,
-                name: playlistName,
-            });
+            const newPlaylist = await this.$store.dispatch(
+                "spotify/createPlaylist",
+                {
+                    user_id: this.userAuthProfile.id,
+                    name: playlistName,
+                }
+            );
 
             let uris = [];
-            this.recommendations.tracks.forEach(track => {
+            this.recommendations.tracks.forEach((track) => {
                 uris.push(track.uri);
             });
 
@@ -171,7 +176,15 @@ export default {
                 uris: uris,
             });
 
-            window.location.reload();
+            await this.$store.dispatch("app/setPopupNotif", {
+                text: `Playlist ${playlistName} successfully created !`,
+                status: true,
+            });
+            document.getElementById("popup-notif").style.display = "block";
+
+            router.push({ path: "/" });
+
+            this.$store.dispatch("spotify/setPlaylistGenStatus", "p1");
         },
     },
 };
