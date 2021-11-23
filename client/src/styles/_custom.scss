@@ -6,3 +6,12 @@
     margin-left: -0.5x;
     bottom: 0;
 }
+#popup-notif {
+    z-index: 10;
+    background: linear-gradient(to right, $secondary, $primary);
+    max-width: 20rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0px;
+}
