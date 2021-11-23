@@ -6,7 +6,7 @@
                     Playlist generation
                 </h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    Generate a playlist from recently played tracks.
+                    Generate a playlist with tracks inspired by recently played tracks.
                 </p>
                 <div class="mt-6" v-if="playlistGenStatus == 'p1'">
                     <button
