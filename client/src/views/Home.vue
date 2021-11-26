@@ -20,9 +20,7 @@
                 <div class="columns is-vcentered">
                     <div class="column is-4">
                         <figure class="image">
-                            <img
-                                src="./../assets/img/home_graph.png"
-                            />
+                            <img src="./../assets/img/home_graph.png" />
                         </figure>
                     </div>
                     <div class="column is-8">
