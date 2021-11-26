@@ -15,7 +15,7 @@ export default {
                 redirect_uri: process.env.SPOTIFY_REDIRECT_URL,
                 state: state,
                 scope: spotifyConf.scope,
-                show_dialog: false,
+                show_dialog: true,
             };
 
             res.redirect(`${spotifyConf.spotifyAccountsAPI}/authorize?${querystring.stringify(params)}`);
