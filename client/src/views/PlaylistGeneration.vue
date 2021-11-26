@@ -27,7 +27,7 @@
                 <div class="m-6" v-if="playlistGenStatus == 'p2'">
                     <div class="columns is-multiline is-mobile">
                         <div
-                            class="column is-1"
+                            class="column is-2"
                             v-for="track in recommendations.tracks"
                             :key="track.id"
                         >
