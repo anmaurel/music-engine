@@ -1,0 +1,40 @@
+[data-onscroll] {
+    opacity: 0;
+}
+
+$delays: (
+    "x2": 0.2s,
+    "x4": 0.4s,
+    "x6": 0.6s,
+    "x8": 0.8s,
+    "x10": 1s,
+);
+@each $delayname, $delay in $delays {
+    .travel-y-#{$delayname} {
+        animation: travel_y 1.4s $delay forwards cubic-bezier(0, 0, 0, 0.99);
+    }
+}
+
+@keyframes travel_y {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// $max: 1;
+// $step: 0.1;
+// @for $i from 1 through ceil($max/$step) {
+//     $value: ($i - 1) * $step + 1;
+//     .travel-y-#{$value} {
+//         animation: anim1 1.4s #{$value}s forwards cubic-bezier(0, 0, 0, 0.99);
+//     }
+// }
+
+// .fade-translation-y {
+//     animation: anim1 1.4s 0.2s forwards cubic-bezier(0, 0, 0, 0.99);
+// }

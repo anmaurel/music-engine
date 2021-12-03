@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex"; 
+import { mapGetters } from "vuex";
 
 import Navbar from "./components/Navbar.vue";
 import PopupNotif from "./components/PopupNotification.vue";
@@ -21,6 +21,6 @@ export default {
     },
     computed: {
         ...mapGetters("app", { popupStatus: "getPopupStatus" }),
-    },
+    }
 };
 </script>
