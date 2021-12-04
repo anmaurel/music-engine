@@ -2,17 +2,7 @@
     <section class="hero is-fullheight-with-navbar">
         <div class="hero-body">
             <div class="container mb-6">
-                <!-- <img
-                        src="@/assets/img/logo.svg"
-                        alt="Logo"
-                        style="width: 45%; margin: 0 auto"
-                    /> -->
-                <object
-                    id="mainLogo"
-                    style="width: 45%"
-                    type="image/svg+xml"
-                    data="src/assets/img/logo.svg"
-                ></object>
+                <MainLogo id="mainLogo" width="45%" />
             </div>
         </div>
         <div class="hero-foot">
@@ -222,10 +212,14 @@
 
 <script>
 import { mapGetters } from "vuex";
-import Vivus from "vivus";
+
+import MainLogo from "@/components/svg/MainLogo.vue";
 
 export default {
     name: "Home",
+    components: {
+        MainLogo,
+    },
     computed: {
         ...mapGetters("spotify", { profile: "getProfile" }),
     },
@@ -240,66 +234,6 @@ export default {
         }
 
         this.$store.dispatch("spotify/getProfile");
-    },
-    mounted() {
-        let svgAnim = new Vivus(
-            "mainLogo",
-            {
-                type: "sync",
-                duration: 180,
-                start: "autostart",
-                forceRender: false,
-                dashGap: 20,
-            },
-            (selector) => {
-                if (selector.getStatus() === "end") {
-
-                    Array.prototype.forEach.call(selector.el.children, (element) => {
-                        element.classList.add('cls-end');
-                    });
-                }
-            }
-        );
-
-        const scrollProperties = [
-            {
-                selector: "[data-onscroll-animation='travel-y']",
-                class: "travel-y",
-            },
-        ];
-
-        scrollProperties.forEach((property) => {
-            const selectors = document.querySelectorAll(property.selector);
-
-            const callback = (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        if (entry.intersectionRatio === 1) {
-                            // visible = 100%
-                        } else if (entry.intersectionRatio > 0.05) {
-                            // visible > 5%
-                            entry.target.classList.add(
-                                `${property.class}-${entry.target.dataset.onscrollDelay}`
-                            );
-                        } else {
-                            // visible < 5%
-                            entry.target.classList.remove(
-                                `${property.class}-${entry.target.dataset.onscrollDelay}`
-                            );
-                        }
-                    } else {
-                        // visible = 0%
-                    }
-                });
-            };
-
-            const options = { threshold: [0, 0.05, 1] };
-            const observer = new IntersectionObserver(callback, options);
-
-            selectors.forEach((selector) => {
-                observer.observe(selector);
-            });
-        });
-    },
+    }
 };
 </script>
