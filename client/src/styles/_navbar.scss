@@ -6,9 +6,9 @@
     @include setup("tablet", "min") {
         padding: 0.8rem 2rem 0 2rem;
     }
-    @include setup("tablet", "max") {
-        padding: 0rem 0rem 0 1rem;
-    }
+    // @include setup("tablet", "max") {
+    //     padding: 0rem 0rem 0 1rem;
+    // }
     a.navbar-item:visited,
     a.navbar-item:hover,
     a.navbar-item:active,
@@ -27,6 +27,9 @@
             span {
                 color: $primary;
             }
+        }
+        @include setup("tablet", "max") {
+            padding: 0rem 0rem 0 1rem;
         }
     }
     .navbar-menu {
@@ -72,6 +75,17 @@
         .navbar-end {
             @include setup("tablet", "min") {
                 margin: 0 0 0 0;
+            }
+        }
+    }
+    .navbar-menu.is-active {
+        background-color: rgba(14, 17, 33, 1);
+        border-bottom: 1px solid #E9486C;
+        border-top: 1px solid #E9486C;
+        .navbar-end {
+            .navbar-item {
+                display: flex;
+                justify-content: center;
             }
         }
     }
