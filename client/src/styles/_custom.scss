@@ -21,4 +21,14 @@
       }
 
 }
-
+.main-block {
+    background-color: rgba(32, 37, 69, 0.2);
+    border-radius: 0px 4px 4px 0px;
+    padding: 1rem 1.5rem !important;
+    // box-shadow: rgba(230, 125, 0, 0.4) 5px 5px, rgba(230, 125, 0, 0.3) 10px 10px, rgba(230, 125, 0, 0.2) 15px 15px, rgba(230, 125, 0, 0.1) 20px 20px, rgba(230, 125, 0, 0.05) 25px 25px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    // border: 1px groove white;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #E9486C; 
+}

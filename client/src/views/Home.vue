@@ -12,7 +12,7 @@
     </section>
     <section class="hero">
         <div class="hero-body">
-            <div class="container is-max-desktop mt-4">
+            <div class="container is-max-desktop mt-6 mb-6">
                 <div class="columns is-vcentered">
                     <div
                         data-onscroll
@@ -23,12 +23,19 @@
                         <figure class="image">
                             <img src="./../assets/img/home_graph.png" />
                         </figure>
+                        <!-- <font-awesome-icon
+                            :icon="['fab', 'spotify']"
+                            :mask="['fas', 'square']"
+                            class=""
+                            size="10x"
+                            :style="{ color: '#E9486C' }"
+                        /> -->
                     </div>
                     <div
                         data-onscroll
                         data-onscroll-animation="travel-y"
                         data-onscroll-delay="x2"
-                        class="column is-8"
+                        class="column is-8 main-block"
                     >
                         <p
                             class="
