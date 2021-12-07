@@ -169,46 +169,6 @@ export default {
                 }
             }
         );
-
-        const scrollProperties = [
-            {
-                selector: "[data-onscroll-animation='travel-y']",
-                class: "travel-y",
-            },
-        ];
-
-        scrollProperties.forEach((property) => {
-            const selectors = document.querySelectorAll(property.selector);
-
-            const callback = (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        if (entry.intersectionRatio === 1) {
-                            // visible = 100%
-                        } else if (entry.intersectionRatio > 0.05) {
-                            // visible > 5%
-                            entry.target.classList.add(
-                                `${property.class}-${entry.target.dataset.onscrollDelay}`
-                            );
-                        } else {
-                            // visible < 5%
-                            entry.target.classList.remove(
-                                `${property.class}-${entry.target.dataset.onscrollDelay}`
-                            );
-                        }
-                    } else {
-                        // visible = 0%
-                    }
-                });
-            };
-
-            const options = { threshold: [0, 0.05, 1] };
-            const observer = new IntersectionObserver(callback, options);
-
-            selectors.forEach((selector) => {
-                observer.observe(selector);
-            });
-        });
     },
 }
 </script>
