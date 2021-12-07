@@ -16,19 +16,76 @@
     margin: 0px;
 }
 #mainLogo {
-    @include setup('mobile', 'max') {
+    @include setup("mobile", "max") {
         width: 80%;
-      }
-
+    }
 }
 .main-block {
     background-color: rgba(32, 37, 69, 0.2);
     border-radius: 0px 4px 4px 0px;
     padding: 1rem 1.5rem !important;
     // box-shadow: rgba(230, 125, 0, 0.4) 5px 5px, rgba(230, 125, 0, 0.3) 10px 10px, rgba(230, 125, 0, 0.2) 15px 15px, rgba(230, 125, 0, 0.1) 20px 20px, rgba(230, 125, 0, 0.05) 25px 25px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
     // border: 1px groove white;
     border-left-width: 5px;
     border-left-style: solid;
-    border-left-color: #E9486C; 
+    border-left-color: #e9486c;
 }
+
+%home-block {
+    background-color: rgba(32, 37, 69, 0.2);
+    padding: 1rem 1.5rem !important;
+    // box-shadow: rgba(230, 125, 0, 0.4) 5px 5px, rgba(230, 125, 0, 0.3) 10px 10px, rgba(230, 125, 0, 0.2) 15px 15px, rgba(230, 125, 0, 0.1) 20px 20px, rgba(230, 125, 0, 0.05) 25px 25px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.home-block-left {
+    @extend %home-block;
+    border-radius: 0px 4px 4px 0px;
+    border-left: solid 5px transparent;
+    background-repeat: repeat-y;
+    background-image: linear-gradient(to left top, $secondary, $primary);
+    background-size: 5px;
+}
+.home-block-right {
+    @extend %home-block;
+    border-radius: 0px 4px 4px 0px;
+    // border-right: solid 5px transparent;
+    border-left: solid 5px transparent;
+    background-repeat: repeat-y;
+    background-image: linear-gradient(to left top, $secondary, $primary);
+    background-size: 5px;
+}
+#home_prez {
+    .hero-body {
+        @include setup("mobile", "max") {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+        .container.is-max-widescreen:first-child {
+            @include setup("mobile", "max") {
+                margin-top: 2rem;
+            }
+            margin-top: 4rem;
+        }
+        .container.is-max-widescreen:not(:first-child) {
+            @include setup("mobile", "max") {
+                margin-top: 6rem;
+            }
+            margin-top: 10rem;
+        }
+    }
+}
+.has-text-primary-gradient {
+    background-image: linear-gradient(to right, $secondary, $primary);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+#scroll_indication {
+    transition: opacity 0.6s;
+}
+

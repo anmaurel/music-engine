@@ -5,48 +5,226 @@
                 <MainLogo id="mainLogo" width="45%" />
             </div>
         </div>
-        <div class="hero-foot">
+        <div id="scroll_indication" class="hero-foot">
             <p class="is-size-7 has-text-weight-light pb-4">scroll</p>
             <div class="scroll-bar"></div>
         </div>
     </section>
-    <section class="hero">
+    <section id="home_prez" class="hero">
         <div class="hero-body">
-            <div class="container is-max-desktop mt-6 mb-6">
+            <!-- Box1 -->
+            <div class="container is-max-widescreen">
                 <div class="columns is-vcentered">
                     <div
                         data-onscroll
                         data-onscroll-animation="travel-y"
                         data-onscroll-delay="x2"
-                        class="column is-4"
+                        class="column is-4 is-hidden-mobile"
                     >
                         <figure class="image">
-                            <img src="./../assets/img/home_graph.png" />
+                            <img
+                                src="./../assets/img/icon-spotify.png"
+                                style="
+                                    max-width: 55% !important;
+                                    margin: 0 auto;
+                                "
+                            />
                         </figure>
-                        <!-- <font-awesome-icon
-                            :icon="['fab', 'spotify']"
-                            :mask="['fas', 'square']"
-                            class=""
-                            size="10x"
-                            :style="{ color: '#E9486C' }"
-                        /> -->
                     </div>
                     <div
                         data-onscroll
                         data-onscroll-animation="travel-y"
                         data-onscroll-delay="x2"
-                        class="column is-8 main-block"
+                        class="column is-8 home-block-left"
                     >
+                        <div class="columns is-vcentered m-0">
+                            <p
+                                class="
+                                    column
+                                    has-text-left
+                                    is-size-4
+                                    has-text-weight-bold
+                                    px-0
+                                    pt-0
+                                    pb-2
+                                "
+                            >
+                                <span class="has-text-primary-gradient"
+                                    >Spotify</span
+                                >
+                            </p>
+                            <p
+                                class="
+                                    column
+                                    has-text-right
+                                    is-size-6 is-uppercase
+                                    has-text-weight-semibold has-text-primary
+                                    px-0
+                                    pt-0
+                                    pb-2
+                                "
+                            >
+                                <span class="has-text-primary-gradient"
+                                    >Data</span
+                                >
+                            </p>
+                        </div>
                         <p
                             class="
                                 is-size-5
-                                has-text-weight-light has-text-justified
+                                has-text-weight-normal has-text-justified
                             "
                         >
                             Music Engine is a platform where you can find all
                             kinds of statistics about users and artists on
                             Spotify, displayed in graphical form for better
-                            visualisation. Music Engine also allows you to
+                            visualisation. Music Engine also allows you tox
+                            follow the evolution of the artists' statistics and
+                            their songs as an innovative graphical.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Box2 -->
+            <div class="container is-max-widescreen">
+                <div class="columns is-vcentered">
+                    <div
+                        data-onscroll
+                        data-onscroll-animation="travel-y"
+                        data-onscroll-delay="x2"
+                        class="column is-8 home-block-right"
+                    >
+                        <div class="columns is-vcentered m-0">
+                            <p
+                                class="
+                                    column
+                                    has-text-left
+                                    is-size-4
+                                    has-text-weight-bold has-text-info
+                                    px-0
+                                    pt-0
+                                    pb-2
+                                "
+                            >
+                                <span class="has-text-primary-gradient"
+                                    >Playlist generation</span
+                                >
+                            </p>
+                            <p
+                                class="
+                                    column
+                                    has-text-right
+                                    is-size-6 is-uppercase
+                                    has-text-weight-semibold has-text-primary
+                                    px-0
+                                    pt-0
+                                    pb-2
+                                "
+                            >
+                                <span class="has-text-primary-gradient"
+                                    >Functionality</span
+                                >
+                            </p>
+                        </div>
+                        <p
+                            class="
+                                is-size-5
+                                has-text-weight-normal has-text-justified
+                            "
+                        >
+                            Music Engine is a platform where you can find all
+                            kinds of statistics about users and artists on
+                            Spotify, displayed in graphical form for better
+                            visualisation. Music Engine also allows you tox
+                            follow the evolution of the artists' statistics and
+                            their songs as an innovative graphical.
+                        </p>
+                    </div>
+                    <div
+                        data-onscroll
+                        data-onscroll-animation="travel-y"
+                        data-onscroll-delay="x2"
+                        class="column is-4 is-hidden-mobile"
+                    >
+                        <figure class="image">
+                            <img
+                                src="./../assets/img/icon-playlist.png"
+                                style="
+                                    max-width: 55% !important;
+                                    margin: 0 auto;
+                                "
+                            />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- Box3 -->
+            <div class="container is-max-widescreen">
+                <div class="columns is-vcentered">
+                    <div
+                        data-onscroll
+                        data-onscroll-animation="travel-y"
+                        data-onscroll-delay="x2"
+                        class="column is-4 is-hidden-mobile"
+                    >
+                        <figure class="image">
+                            <img
+                                src="./../assets/img/icon-dataviz.png"
+                                style="
+                                    max-width: 55% !important;
+                                    margin: 0 auto;
+                                "
+                            />
+                        </figure>
+                    </div>
+                    <div
+                        data-onscroll
+                        data-onscroll-animation="travel-y"
+                        data-onscroll-delay="x2"
+                        class="column is-8 home-block-left"
+                    >
+                        <div class="columns is-vcentered m-0">
+                            <p
+                                class="
+                                    column
+                                    has-text-left
+                                    is-size-4
+                                    has-text-weight-bold has-text-info
+                                    px-0
+                                    pt-0
+                                    pb-2
+                                "
+                            >
+                                <span class="has-text-primary-gradient"
+                                    >Data visualization</span
+                                >
+                            </p>
+                            <p
+                                class="
+                                    column
+                                    has-text-right
+                                    is-size-6 is-uppercase
+                                    has-text-weight-semibold has-text-primary
+                                    px-0
+                                    pt-0
+                                    pb-2
+                                "
+                            >
+                                <span class="has-text-primary-gradient"
+                                    >Functionality</span
+                                >
+                            </p>
+                        </div>
+                        <p
+                            class="
+                                is-size-5
+                                has-text-weight-normal has-text-justified
+                            "
+                        >
+                            Music Engine is a platform where you can find all
+                            kinds of statistics about users and artists on
+                            Spotify, displayed in graphical form for better
+                            visualisation. Music Engine also allows you tox
                             follow the evolution of the artists' statistics and
                             their songs as an innovative graphical.
                         </p>
@@ -230,6 +408,12 @@ export default {
     computed: {
         ...mapGetters("spotify", { profile: "getProfile" }),
     },
+    methods: {
+        hideScrollIndication(event) {
+            event.target.style.display = "none";
+            console.log("ok");
+        },
+    },
     created() {
         const { access_token, refresh_token, expires_in } = this.$route.query;
 
@@ -241,6 +425,68 @@ export default {
         }
 
         this.$store.dispatch("spotify/getProfile");
-    }
+    },
+    mounted() {
+        let oldValue = 0;
+        let newValue = 0;
+
+        window.addEventListener("scroll", () => {
+            const element = document.querySelector("#scroll_indication");
+
+            newValue = window.pageYOffset;
+
+            if (oldValue - newValue < 0) {
+                if (window.scrollY > 100) {
+                    element.style.opacity = 0;
+                }
+            } else if (oldValue - newValue > 0) {
+                if (window.scrollY <= 100) {
+                    element.style.opacity = 1;
+                }
+            }
+
+            oldValue = newValue;
+        });
+
+        const scrollProperties = [
+            {
+                selector: "[data-onscroll-animation='travel-y']",
+                class: "travel-y",
+            },
+        ];
+
+        scrollProperties.forEach((property) => {
+            const selectors = document.querySelectorAll(property.selector);
+
+            const callback = (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.intersectionRatio === 1) {
+                            // visible = 100%
+                        } else if (entry.intersectionRatio > 0.05) {
+                            // visible > 5%
+                            entry.target.classList.add(
+                                `${property.class}-${entry.target.dataset.onscrollDelay}`
+                            );
+                        } else {
+                            // visible < 5%
+                            entry.target.classList.remove(
+                                `${property.class}-${entry.target.dataset.onscrollDelay}`
+                            );
+                        }
+                    } else {
+                        // visible = 0%
+                    }
+                });
+            };
+
+            const options = { threshold: [0, 0.05, 1] };
+            const observer = new IntersectionObserver(callback, options);
+
+            selectors.forEach((selector) => {
+                observer.observe(selector);
+            });
+        });
+    },
 };
 </script>

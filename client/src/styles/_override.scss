@@ -1,0 +1,5 @@
+.has-text-right {
+    @include setup("mobile", "max") {
+        text-align: left !important;
+    }
+}

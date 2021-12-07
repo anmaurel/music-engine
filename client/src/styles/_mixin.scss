@@ -1,17 +1,80 @@
 $breakpoints: (
-  'mobile': 769px,
-  'tablet': 1024px,
-  'desktop': 1216px,
-  'widescreen': 1408px,
+    "mobile": 769px,
+    "tablet": 1024px,
+    "desktop": 1216px,
+    "widescreen": 1408px,
 );
 @mixin setup($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-    @if $type == max {
-      $width: $width - 1px;
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
     }
-    @media only screen and (#{$type}-width: $width) {
-      @content;
-    }
-  }
 }
+
+$directions: (("horizontal", "right"), ("vertical", "top"));
+@each $direction in $directions {
+    $directionKey: nth($direction, 1);
+    $directionValue: nth($direction, 2);
+
+    .has-text-gradient-#{directionKey} {
+        // background: linear-gradient(to #{directionValue}, $secondary, $primary);
+        // background: -webkit-linear-gradient(
+        //     to #{directionValue},
+        //     $secondary,
+        //     $primary
+        // );
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+
+        background-image: linear-gradient(to #{directionValue}, $secondary, $primary);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+}
+
+// $sizeUnit: rem;
+// $marginKey: 'm';
+// $paddingKey: 'p';
+// $separator: '-';
+// $sizes: (
+//     ('7', 5),
+//     ('8', 8),
+// );
+// $positions: (
+//     ('t', 'top'),
+//     ('r', 'right'),
+//     ('b', 'bottom'),
+//     ('l', 'left')
+// );
+// @function sizeValue($key, $value) {
+//     @return if($key == 'none', 0, $value + $sizeUnit);
+// }
+// @each $size in $sizes {
+//     $sizeKey: nth($size, 1);
+//     $sizeValue: nth($size, 2);
+//     .#{$marginKey}#{$separator}#{$sizeKey} {
+//         margin: sizeValue($sizeKey, $sizeValue) !important;
+//     }
+//     .#{$paddingKey}#{$separator}#{$sizeKey} {
+//         padding: sizeValue($sizeKey, $sizeValue) !important;
+//     }
+//     @each $position in $positions {
+//         $posKey: nth($position, 1);
+//         $posValue: nth($position, 2);
+//         .#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
+//             margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important;
+//         }
+//         .#{$paddingKey}#{$posKey}#{$separator}#{$sizeKey} {
+//             padding-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important;
+//         }
+//     }
+// }

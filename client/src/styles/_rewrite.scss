@@ -63,3 +63,8 @@ html {
 .box {
     padding: 0.1rem !important;
 }
+.has-text-right {
+    @include setup("mobile", "max") {
+        text-align: left !important;
+    }
+}
