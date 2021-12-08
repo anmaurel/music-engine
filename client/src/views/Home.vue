@@ -232,6 +232,7 @@
                 </div>
             </div>
         </div>
+        <div class="hero-foot mt-6"></div>
     </section>
     <!-- <section class="hero">
             <div class="hero-head mb-6">
@@ -463,7 +464,7 @@ export default {
                     if (entry.isIntersecting) {
                         if (entry.intersectionRatio === 1) {
                             // visible = 100%
-                        } else if (entry.intersectionRatio > 0.05) {
+                        } else if (entry.intersectionRatio > 0.1) {
                             // visible > 5%
                             entry.target.classList.add(
                                 `${property.class}-${entry.target.dataset.onscrollDelay}`
@@ -480,7 +481,7 @@ export default {
                 });
             };
 
-            const options = { threshold: [0, 0.05, 1] };
+            const options = { threshold: [0, 0.1, 1] };
             const observer = new IntersectionObserver(callback, options);
 
             selectors.forEach((selector) => {
