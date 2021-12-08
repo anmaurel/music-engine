@@ -30,6 +30,16 @@
                 <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white"
+                    to="/playlist-generation"
+                    ><font-awesome-icon
+                        :icon="['far', 'list-alt']"
+                        class="mr-2"
+                        size="sm"
+                    />Playlist generation</router-link
+                >
+                <router-link
+                    v-if="isAuth"
+                    class="navbar-item has-text-white"
                     to="/recent-plays"
                     ><font-awesome-icon
                         :icon="['far', 'play-circle']"
@@ -67,16 +77,6 @@
                         size="sm"
                     />Historical artist data</router-link
                 > -->
-                <router-link
-                    v-if="isAuth"
-                    class="navbar-item has-text-white"
-                    to="/playlist-generation"
-                    ><font-awesome-icon
-                        :icon="['far', 'list-alt']"
-                        class="mr-2"
-                        size="sm"
-                    />Playlist generation</router-link
-                >
             </div>
             <div class="navbar-end">
                 <a v-if="!isAuth" class="navbar-item" :href="`${loginUrl}`">
