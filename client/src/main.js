@@ -9,15 +9,38 @@ import * as echarts from "echarts";
 import { plugin } from "echarts-for-vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-import { faFileMedical, faUser, faHistory, faLaptopHouse, faTabletAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+    faFileMedical,
+    faUser,
+    faHistory,
+    faLaptopHouse,
+    faTabletAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
-import { faFileAudio, faIdBadge, faPlayCircle, faListAlt } from "@fortawesome/free-regular-svg-icons";
+import {
+    faFileAudio,
+    faIdBadge,
+    faPlayCircle,
+    faListAlt,
+} from "@fortawesome/free-regular-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import VueGtag from "vue-gtag";
 
 import "./styles/main.scss";
 
-library.add(faFileMedical, faPlayCircle, faUser, faFileAudio, faHistory, faSpotify, faLaptopHouse, faIdBadge, faTabletAlt, faListAlt);
+library.add(
+    faFileMedical,
+    faPlayCircle,
+    faUser,
+    faFileAudio,
+    faHistory,
+    faSpotify,
+    faLaptopHouse,
+    faIdBadge,
+    faTabletAlt,
+    faListAlt
+);
 
 createApp(App)
     .component("font-awesome-icon", FontAwesomeIcon)
@@ -26,4 +49,13 @@ createApp(App)
     .use(VueAxios, axios)
     .use(LoadScript)
     .use(plugin, { echarts, h })
+    .use(
+        VueGtag,
+        {
+            appName: "Music Engine",
+            pageTrackerScreenviewEnabled: true,
+            config: { id: "296339118" },
+        },
+        router
+    )
     .mount("#app");

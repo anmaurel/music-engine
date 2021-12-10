@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import Home from "@/views/Home.vue";
 import RecentPlays from "@/views/RecentPlays.vue";
 import TopArtists from "@/views/TopArtists.vue";
@@ -63,7 +64,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-    if (to.meta.requiresAuth && !window.localStorage.getItem("spotify_access_token")) {
+    if (
+        to.meta.requiresAuth &&
+        !window.localStorage.getItem("spotify_access_token")
+    ) {
         return {
             path: "/",
             query: { redirect: to.fullPath },
