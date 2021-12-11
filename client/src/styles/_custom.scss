@@ -88,4 +88,16 @@
 #scroll_indication {
     transition: opacity 0.6s;
 }
-
+.hr-foot {
+    width: 80%;
+    height: 3px;
+    margin: 0 auto;
+    // border: 1px solid transparent;
+    background: linear-gradient(to right, $secondary, $primary);
+}
+footer {
+    @include setup("mobile", "max") {
+        margin-top: 4rem;
+    }
+    margin-top: 8rem;
+}

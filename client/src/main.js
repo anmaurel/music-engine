@@ -16,7 +16,7 @@ import {
     faLaptopHouse,
     faTabletAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedin, faSpotify, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import {
     faFileAudio,
     faIdBadge,
@@ -39,7 +39,10 @@ library.add(
     faLaptopHouse,
     faIdBadge,
     faTabletAlt,
-    faListAlt
+    faListAlt,
+    faInstagram,
+    faTwitter,
+    faLinkedin
 );
 
 createApp(App)
