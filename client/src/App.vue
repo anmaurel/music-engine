@@ -11,8 +11,8 @@
 <script>
 import { mapGetters } from "vuex";
 
-import Navbar from "./components/Navbar.vue";
-import PopupNotif from "./components/PopupNotification.vue";
+import Navbar from "@/components/Navbar.vue";
+import PopupNotif from "@/components/PopupNotification.vue";
 
 export default {
     components: {

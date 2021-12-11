@@ -68,3 +68,9 @@ html {
         text-align: left !important;
     }
 }
+svg.has-text-info {
+    transition: all .4s;
+}
+svg.has-text-info:hover {
+    color: #E9486C !important;
+}

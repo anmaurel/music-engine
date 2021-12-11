@@ -18,7 +18,7 @@
                     <div
                         data-onscroll
                         data-onscroll-animation="travel-y"
-                        data-onscroll-delay="x2"
+                        data-onscroll-delay="x4"
                         class="column is-4 is-hidden-mobile"
                     >
                         <figure class="image">
@@ -143,7 +143,7 @@
                     <div
                         data-onscroll
                         data-onscroll-animation="travel-y"
-                        data-onscroll-delay="x2"
+                        data-onscroll-delay="x4"
                         class="column is-4 is-hidden-mobile"
                     >
                         <figure class="image">
@@ -164,7 +164,7 @@
                     <div
                         data-onscroll
                         data-onscroll-animation="travel-y"
-                        data-onscroll-delay="x2"
+                        data-onscroll-delay="x4"
                         class="column is-4 is-hidden-mobile"
                     >
                         <figure class="image">
@@ -394,16 +394,23 @@
                 </div>
             </div>
         </section> -->
+    <section class="hero">
+        <div class="hero-foot">
+            <Footer />
+        </div>
+    </section>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
+import Footer from "@/components/Footer.vue";
 import MainLogo from "@/components/svg/MainLogo.vue";
 
 export default {
     name: "Home",
     components: {
+        Footer,
         MainLogo,
     },
     computed: {
