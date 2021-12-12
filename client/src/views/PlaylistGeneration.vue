@@ -25,26 +25,6 @@
                     </button>
                 </div>
                 <div class="m-6" v-if="playlistGenStatus == 'p2'">
-                    <div class="columns is-multiline is-mobile">
-                        <div
-                            class="column is-2"
-                            v-for="track in recommendations.tracks"
-                            :key="track.id"
-                        >
-                            <a class="box" :href="track.uri">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure class="image is-4by3">
-                                            <img
-                                                :src="track.album.images[1].url"
-                                                alt="Placeholder image"
-                                            />
-                                        </figure>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                     <div class="columns is-mobile is-centered mt-5">
                         <div class="column is-narrow field">
                             <!-- <label class="label has-text-white"
@@ -74,7 +54,41 @@
                                 >
                                     Create playlist
                                 </button>
+                                <button
+                                    id="btnGenerate"
+                                    class="
+                                        mx-4
+                                        button
+                                        is-medium
+                                        has-background-gradient-1
+                                        has-text-weight-medium
+                                        has-text-white
+                                    "
+                                    @click="generateRecommendations()"
+                                >
+                                    Regenerate
+                                </button>
                             </p>
+                        </div>
+                    </div>
+                    <div class="columns is-multiline is-mobile">
+                        <div
+                            class="column is-2"
+                            v-for="track in recommendations.tracks"
+                            :key="track.id"
+                        >
+                            <a class="box" :href="track.uri">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img
+                                                :src="track.album.images[1].url"
+                                                alt="Placeholder image"
+                                            />
+                                        </figure>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -149,6 +163,9 @@ export default {
                 seed_tracks: tracks.slice(0, 5).join(),
             });
 
+            btnGenerate.removeAttribute("disabled");
+            btnGenerate.classList.remove("is-loading");
+
             this.$store.dispatch("spotify/setPlaylistGenStatus", "p2");
         },
         async createPlaylist(playlistName) {
@@ -185,6 +202,8 @@ export default {
             router.push({ path: "/" });
 
             this.$store.dispatch("spotify/setPlaylistGenStatus", "p1");
+
+            window.location.href = newPlaylist.uri;
         },
     },
 };
