@@ -143,7 +143,7 @@ export default {
             const tracksShuffled = tracks.sort(() => 0.5 - Math.random());
 
             await this.$store.dispatch("spotify/getRecommendations", {
-                limit: 24,
+                limit: 30,
                 seed_artists: "",
                 seed_genres: "",
                 seed_tracks: tracks.slice(0, 5).join(),
