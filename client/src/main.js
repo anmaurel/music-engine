@@ -55,9 +55,9 @@ createApp(App)
     .use(
         VueGtag,
         {
+            config: { id: "UA-156805620-2" },
             appName: "Music Engine",
-            pageTrackerScreenviewEnabled: true,
-            config: { id: "296339118" },
+            pageTrackerScreenviewEnabled: true
         },
         router
     )
