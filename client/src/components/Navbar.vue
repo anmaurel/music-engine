@@ -20,7 +20,10 @@
         </div>
         <div class="navbar-menu" :class="{ 'is-active': showNav }">
             <div class="navbar-start">
-                <router-link class="navbar-item has-text-white" to="/"
+                <router-link
+                    class="navbar-item has-text-white"
+                    to="/"
+                    @click="analyticsLinkClicked"
                     ><font-awesome-icon
                         :icon="['fas', 'laptop-house']"
                         class="mr-2"
@@ -31,6 +34,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/playlist-generation"
+                    @click="analyticsLinkClicked"
                     ><font-awesome-icon
                         :icon="['far', 'list-alt']"
                         class="mr-2"
@@ -41,6 +45,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/recent-plays"
+                    @click="analyticsLinkClicked"
                     ><font-awesome-icon
                         :icon="['far', 'play-circle']"
                         class="mr-2"
@@ -51,6 +56,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/top-artists"
+                    @click="analyticsLinkClicked"
                     ><font-awesome-icon
                         :icon="['far', 'id-badge']"
                         class="mr-2"
@@ -61,6 +67,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/top-tracks"
+                    @click="analyticsLinkClicked"
                     ><font-awesome-icon
                         :icon="['far', 'file-audio']"
                         class="mr-2"
@@ -135,6 +142,13 @@ export default {
     },
     methods: {
         ...mapActions("auth", ["logout"]),
+        analyticsLinkClicked() {
+            this.$gtag.event("navbar_link_click", {
+                event_category: "navbar",
+                event_label: "Navbar link click",
+                value: 1,
+            });
+        },
     },
     mounted() {
         if (window.localStorage.getItem("spotify_access_token") !== null) {
