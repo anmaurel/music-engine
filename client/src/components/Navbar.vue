@@ -101,6 +101,7 @@
                     <router-link
                         class="navbar-item has-text-white"
                         to="/devices"
+                        @click="analyticsLinkClicked('Devices')"
                         ><font-awesome-icon
                             :icon="['fas', 'tablet-alt']"
                             class="mr-2"
@@ -143,9 +144,9 @@ export default {
     methods: {
         ...mapActions("auth", ["logout"]),
         analyticsLinkClicked(btnName) {
-            this.$gtag.event(btnName, {
-                event_category: "navbar_link_click",
-                event_label: "Navbar link click",
+            this.$gtag.event(`Access to ${btnName} page`, {
+                event_category: "navbar_link",
+                event_label: "Navbar link",
                 value: 1,
             });
         },
