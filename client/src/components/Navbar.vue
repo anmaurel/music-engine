@@ -23,7 +23,7 @@
                 <router-link
                     class="navbar-item has-text-white"
                     to="/"
-                    @click="analyticsLinkClicked"
+                    @click="analyticsLinkClicked("Home")"
                     ><font-awesome-icon
                         :icon="['fas', 'laptop-house']"
                         class="mr-2"
@@ -34,7 +34,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/playlist-generation"
-                    @click="analyticsLinkClicked"
+                    @click="analyticsLinkClicked("Playlist generation")"
                     ><font-awesome-icon
                         :icon="['far', 'list-alt']"
                         class="mr-2"
@@ -45,7 +45,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/recent-plays"
-                    @click="analyticsLinkClicked"
+                    @click="analyticsLinkClicked("Recent Plays")"
                     ><font-awesome-icon
                         :icon="['far', 'play-circle']"
                         class="mr-2"
@@ -56,7 +56,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/top-artists"
-                    @click="analyticsLinkClicked"
+                    @click="analyticsLinkClicked("Top artists")"
                     ><font-awesome-icon
                         :icon="['far', 'id-badge']"
                         class="mr-2"
@@ -67,7 +67,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/top-tracks"
-                    @click="analyticsLinkClicked"
+                    @click="analyticsLinkClicked("Top tracks")"
                     ><font-awesome-icon
                         :icon="['far', 'file-audio']"
                         class="mr-2"
@@ -142,9 +142,9 @@ export default {
     },
     methods: {
         ...mapActions("auth", ["logout"]),
-        analyticsLinkClicked() {
-            this.$gtag.event("navbar_link_click", {
-                event_category: "navbar",
+        analyticsLinkClicked(btnName) {
+            this.$gtag.event(btnName, {
+                event_category: "navbar_link_click",
                 event_label: "Navbar link click",
                 value: 1,
             });
