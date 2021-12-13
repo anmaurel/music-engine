@@ -23,7 +23,7 @@
                 <router-link
                     class="navbar-item has-text-white"
                     to="/"
-                    @click="analyticsLinkClicked("Home")"
+                    @click="analyticsLinkClicked('Home')"
                     ><font-awesome-icon
                         :icon="['fas', 'laptop-house']"
                         class="mr-2"
@@ -34,7 +34,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/playlist-generation"
-                    @click="analyticsLinkClicked("Playlist generation")"
+                    @click="analyticsLinkClicked('Playlist generation')"
                     ><font-awesome-icon
                         :icon="['far', 'list-alt']"
                         class="mr-2"
@@ -45,7 +45,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/recent-plays"
-                    @click="analyticsLinkClicked("Recent Plays")"
+                    @click="analyticsLinkClicked('Recent Plays')"
                     ><font-awesome-icon
                         :icon="['far', 'play-circle']"
                         class="mr-2"
@@ -56,7 +56,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/top-artists"
-                    @click="analyticsLinkClicked("Top artists")"
+                    @click="analyticsLinkClicked('Top artists')"
                     ><font-awesome-icon
                         :icon="['far', 'id-badge']"
                         class="mr-2"
@@ -67,7 +67,7 @@
                     v-if="isAuth"
                     class="navbar-item has-text-white"
                     to="/top-tracks"
-                    @click="analyticsLinkClicked("Top tracks")"
+                    @click="analyticsLinkClicked('Top tracks')"
                     ><font-awesome-icon
                         :icon="['far', 'file-audio']"
                         class="mr-2"
