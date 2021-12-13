@@ -163,6 +163,12 @@ export default {
                 seed_tracks: tracks.slice(0, 5).join(),
             });
 
+            this.$gtag.event("Generate recommendations", {
+                event_category: "playlist_generation",
+                event_label: "Playlist generation",
+                value: 1,
+            });
+
             btnGenerate.removeAttribute("disabled");
             btnGenerate.classList.remove("is-loading");
 
@@ -191,6 +197,12 @@ export default {
             await this.$store.dispatch("spotify/addItemsPlaylist", {
                 playlist_id: newPlaylist.id,
                 uris: uris,
+            });
+
+            this.$gtag.event("Create playlist", {
+                event_category: "playlist_generation",
+                event_label: "Playlist generation",
+                value: 1,
             });
 
             await this.$store.dispatch("app/setPopupNotif", {
