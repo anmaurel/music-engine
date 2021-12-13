@@ -25,8 +25,8 @@
                     </button>
                 </div>
                 <div class="m-6" v-if="playlistGenStatus == 'p2'">
-                    <div class="columns is-centered mt-5">
-                        <div class="column is-narrow field">
+                    <div class="columns is-centered my-5">
+                        <div class="column is-narrow field m-0">
                             <!-- <label class="label has-text-white"
                                 >Playlist name</label
                             > -->
