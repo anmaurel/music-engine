@@ -15,14 +15,14 @@
             <div class="column is-3">
                 <p class="has-text-weight-semibold">
                     Share on social media
-                    <a href="">
+                    <a href="https://www.instagram.com/p/CXdjarbMjn8/?utm_medium=share_sheet">
                         <font-awesome-icon
                             :icon="['fab', 'instagram']"
                             class="mx-1 has-text-info"
                             size="lg"
                         />
                     </a>
-                    <a href="">
+                    <!-- <a href="">
                         <font-awesome-icon
                             :icon="['fab', 'twitter']"
                             class="mx-1 has-text-info"
@@ -35,7 +35,7 @@
                             class="mx-1 has-text-info"
                             size="lg"
                         />
-                    </a>
+                    </a> -->
                 </p>
             </div>
         </div>

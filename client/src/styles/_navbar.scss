@@ -25,7 +25,7 @@
         }
         .navbar-burger {
             span {
-                color: $primary;
+                background: linear-gradient(to right, $secondary, $primary);
             }
         }
         @include setup("tablet", "max") {
@@ -79,10 +79,13 @@
         }
     }
     .navbar-menu.is-active {
-        background-color: rgba(14, 17, 33, 1);
-        border-bottom: 1px solid #E9486C;
-        border-top: 1px solid #E9486C;
+        padding: 1px 0px;
+        background: linear-gradient(to right, $secondary, $primary);
+        .navbar-start {
+            background-color: rgba(14, 17, 33, 1);
+        }
         .navbar-end {
+            background-color: rgba(14, 17, 33, 1);
             .navbar-item {
                 display: flex;
                 justify-content: center;
