@@ -103,6 +103,12 @@ footer {
 }
 #btnGenerate {
     @include setup("mobile", "max") {
-        margin: 1.2rem 0;
+        // margin: 1.2rem 0;
     }
+}
+.block-tracks {
+    background-color: rgba(32, 37, 69, 0.2);
+    padding: 0rem 0.5rem !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }

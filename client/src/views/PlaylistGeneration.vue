@@ -24,8 +24,11 @@
                         Generate
                     </button>
                 </div>
-                <div class="m-6" v-if="playlistGenStatus == 'p2'">
-                    <div class="columns is-centered my-5">
+                <div
+                    class="m-6-tablet my-4-mobile mx-0-mobile"
+                    v-if="playlistGenStatus == 'p2'"
+                >
+                    <div class="columns is-centered my-5 pt-5">
                         <div class="column is-narrow field m-0">
                             <!-- <label class="label has-text-white"
                                 >Playlist name</label
@@ -71,9 +74,10 @@
                             </p>
                         </div>
                     </div>
-                    <div class="columns is-multiline is-mobile">
+                    <p>↓ tracks generated ↓</p>
+                    <div class="columns is-multiline is-mobile pt-3 block-tracks">
                         <div
-                            class="column is-2"
+                            class="column is-2-tablet is-3-mobile"
                             v-for="track in recommendations.tracks"
                             :key="track.id"
                         >
@@ -175,47 +179,49 @@ export default {
             this.$store.dispatch("spotify/setPlaylistGenStatus", "p2");
         },
         async createPlaylist(playlistName) {
-            const btnGenerate = document.getElementById("btnCreate");
-            btnGenerate.setAttribute("disabled", "");
-            btnGenerate.classList.add("is-loading");
+            if (playlistName.length !== 0) {
+                const btnGenerate = document.getElementById("btnCreate");
+                btnGenerate.setAttribute("disabled", "");
+                btnGenerate.classList.add("is-loading");
 
-            await this.$store.dispatch("spotify/getProfile");
+                await this.$store.dispatch("spotify/getProfile");
 
-            const newPlaylist = await this.$store.dispatch(
-                "spotify/createPlaylist",
-                {
-                    user_id: this.userAuthProfile.id,
-                    name: playlistName,
-                }
-            );
+                const newPlaylist = await this.$store.dispatch(
+                    "spotify/createPlaylist",
+                    {
+                        user_id: this.userAuthProfile.id,
+                        name: playlistName,
+                    }
+                );
 
-            let uris = [];
-            this.recommendations.tracks.forEach((track) => {
-                uris.push(track.uri);
-            });
+                let uris = [];
+                this.recommendations.tracks.forEach((track) => {
+                    uris.push(track.uri);
+                });
 
-            await this.$store.dispatch("spotify/addItemsPlaylist", {
-                playlist_id: newPlaylist.id,
-                uris: uris,
-            });
+                await this.$store.dispatch("spotify/addItemsPlaylist", {
+                    playlist_id: newPlaylist.id,
+                    uris: uris,
+                });
 
-            this.$gtag.event("Create playlist", {
-                event_category: "playlist_generation",
-                event_label: "Playlist generation",
-                value: 1,
-            });
+                this.$gtag.event("Create playlist", {
+                    event_category: "playlist_generation",
+                    event_label: "Playlist generation",
+                    value: 1,
+                });
 
-            await this.$store.dispatch("app/setPopupNotif", {
-                text: `Playlist ${playlistName} successfully created !`,
-                status: true,
-            });
-            document.getElementById("popup-notif").style.display = "block";
+                await this.$store.dispatch("app/setPopupNotif", {
+                    text: `Playlist ${playlistName} successfully created !`,
+                    status: true,
+                });
+                document.getElementById("popup-notif").style.display = "block";
 
-            router.push({ path: "/" });
+                router.push({ path: "/" });
 
-            this.$store.dispatch("spotify/setPlaylistGenStatus", "p1");
+                this.$store.dispatch("spotify/setPlaylistGenStatus", "p1");
 
-            window.location.href = newPlaylist.uri;
+                window.location.href = newPlaylist.uri;
+            }
         },
     },
 };
