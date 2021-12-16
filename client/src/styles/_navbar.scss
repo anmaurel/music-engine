@@ -9,12 +9,6 @@
     // @include setup("tablet", "max") {
     //     padding: 0rem 0rem 0 1rem;
     // }
-    a.navbar-item:visited,
-    a.navbar-item:hover,
-    a.navbar-item:active,
-    a.navbar-item:link {
-        background-color: transparent !important;
-    }
     .navbar-brand {
         a {
             padding: 0px;

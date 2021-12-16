@@ -228,6 +228,37 @@
                     </div>
                 </div>
             </div>
+            <div class="container is-max-widescreen" v-if="!isAuth">
+                <div class="columns is-centered">
+                    <div
+                        data-onscroll
+                        data-onscroll-animation="travel-y"
+                        data-onscroll-delay="x4"
+                        class="column is-half"
+                    >
+                        <a
+                            :href="`${loginUrl}`"
+                        >
+                            <button
+                                class="
+                                    button
+                                    is-large
+                                    has-background-gradient-1
+                                    has-text-weight-medium
+                                    has-text-white
+                                "
+                            >
+                                <!-- <font-awesome-icon
+                                    :icon="['fab', 'spotify']"
+                                    class="mr-2"
+                                    size="sm"
+                                /> -->
+                                → Login with Spotify ←
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="hero-foot mt-6"></div>
     </section>
@@ -250,13 +281,18 @@ export default {
         Footer,
         MainLogo,
     },
+    data() {
+        return {
+            loginUrl: `${import.meta.env.VITE_BACK_URL}/login`,
+        };
+    },
     computed: {
         ...mapGetters("spotify", { profile: "getProfile" }),
+        ...mapGetters("auth", { isAuth: "getAuthStatus" }),
     },
     methods: {
         hideScrollIndication(event) {
             event.target.style.display = "none";
-            console.log("ok");
         },
     },
     created() {

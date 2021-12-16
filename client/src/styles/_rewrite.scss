@@ -11,6 +11,12 @@ html {
     font-size: $size-normal;
     color: $light !important;
 }
+a:visited,
+a:hover,
+a:active,
+a:link {
+    background-color: transparent !important;
+}
 .button {
     border-width: 1px !important;
     border-color: white !important;
@@ -69,8 +75,8 @@ html {
     }
 }
 svg.has-text-info {
-    transition: all .4s;
+    transition: all 0.4s;
 }
 svg.has-text-info:hover {
-    color: #E9486C !important;
+    color: #e9486c !important;
 }
