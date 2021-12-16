@@ -43,7 +43,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white"
+                    class="navbar-item has-text-white is-hidden-mobile"
                     to="/recent-plays"
                     @click="analyticsLinkClicked('Recent Plays')"
                     ><font-awesome-icon
@@ -54,7 +54,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white"
+                    class="navbar-item has-text-white is-hidden-mobile"
                     to="/top-artists"
                     @click="analyticsLinkClicked('Top artists')"
                     ><font-awesome-icon
@@ -65,7 +65,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white"
+                    class="navbar-item has-text-white is-hidden-mobile"
                     to="/top-tracks"
                     @click="analyticsLinkClicked('Top tracks')"
                     ><font-awesome-icon
