@@ -153,7 +153,7 @@ export default {
             "mainLogo",
             {
                 type: "sync",
-                duration: 110,
+                duration: 180,
                 start: "autostart",
                 forceRender: false,
                 dashGap: 20,
