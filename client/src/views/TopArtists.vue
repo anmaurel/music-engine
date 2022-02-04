@@ -4,136 +4,122 @@
             <div class="container">
                 <h1 class="title is-size-1 has-text-white">Top artists</h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    The top 20 most listened artists displayed by spotify
-                    popularity
+                    The top 20 most listened artists filtered by period and
+                    classified by number of listenings
                 </p>
-                <ECharts
-                    v-if="ready"
-                    ref="chart"
-                    :option="options"
-                    :setOptionOpts="{ notMerge: true }"
-                    :loading="loading"
-                    :loadingOpts="{ text: 'Wait for 0.5s' }"
-                    style="width: 80%; height: 700px; margin: 0 auto"
+
+                <!-- <font-awesome-icon
+                    :icon="['fas', 'stopwatch']"
+                    class="mr-2"
+                    size="sm"
+                /> -->
+
+                <!-- <div class="control has-icons-left mt-6 mb-5"> -->
+                <div class="control mt-6 mb-5">
+                    <div class="select">
+                        <select
+                            @change="fillArtistList"
+                            v-model="periodSelected"
+                        >
+                            <option
+                                v-for="period in periods"
+                                :value="period.sname"
+                            >
+                                {{ period.name }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <font-awesome-icon
+                    :icon="['fas', 'circle-notch']"
+                    size="2x"
+                    spin
+                    v-if="!ready"
                 />
+                <div v-if="ready">
+                    <div class="columns is-multiline is-centered">
+                        <TopStats
+                            class="
+                                column
+                                is-2-fullhd
+                                is-3-widescreen
+                                is-4-desktop
+                                is-6-tablet
+                            "
+                            v-for="(artist, index) in artists"
+                            :key="artist.id"
+                            v-bind="{
+                                index: index + 1,
+                                name: artist.name,
+                                genres: artist.genres,
+                                popularity: artist.popularity,
+                                followers: artist.followers.total,
+                                image: artist.images[0].url,
+                            }"
+                        ></TopStats>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-import * as echarts from "echarts";
-import { h, markRaw } from "vue";
-import { createComponent } from "echarts-for-vue";
 import { mapGetters } from "vuex";
+
+import TopStats from "@/components/TopStats.vue";
 
 export default {
     name: "TopArtists",
     components: {
-        ECharts: createComponent({ echarts, h }),
+        TopStats,
     },
     data() {
         return {
+            periods: [
+                { name: "last month", sname: "short_term", id: 1 },
+                { name: "last 6 months", sname: "medium_term", id: 2 },
+                { name: "all time", sname: "long_term", id: 3 },
+            ],
+            periodSelected: "short_term",
             artists: [],
             ready: false,
-            loading: false,
-            options: markRaw({
-                grid: {
-                    left: "3%",
-                    right: "4%",
-                    bottom: "3%",
-                    containLabel: true,
-                },
-                xAxis: {
-                    type: "value",
-                },
-                yAxis: {
-                    type: "category",
-                    data: [],
-                    axisLabel: {
-                        textStyle: {
-                            color: "#fff",
-                            fontWeight: "600",
-                            fontSize: "14",
-                            fontFamily: "Poppins",
-                        },
-                    },
-                },
-                visualMap: {
-                    orient: "horizontal",
-                    left: "center",
-                    min: 0,
-                    max: 100,
-                    dimension: 0,
-                    inRange: {
-                        color: ["#E67D00", "#E9486C"],
-                    },
-                    hoverLink: true,
-                    itemHeight: 400,
-                    top: 10,
-                    textStyle: {
-                        color: "#fff",
-                        fontWeight: "400",
-                        fontFamily: "Poppins",
-                    },
-                    text: ["High", "Low"],
-                },
-                series: [
-                    {
-                        name: "Top artists",
-                        type: "bar",
-                        barWidth: "85%",
-                        stack: "总量",
-                        label: {
-                            show: true,
-                            position: "insideRight",
-                            fontWeight: "600",
-                            fontSize: "14",
-                            fontFamily: "Poppins",
-                            verticalAlign: "middle",
-                            offset: [-4, 2],
-                            color: "#fff",
-                        },
-                        itemStyle: {
-                            normal: {
-                                color: "#E9486C",
-                            },
-                        },
-                        data: [],
-                    },
-                ],
-            }),
         };
     },
     computed: {
         ...mapGetters("spotify", { topArtists: "getTopArtists" }),
     },
     methods: {
-        resetContent() {
-            const removeElements = (elms) => elms.forEach((el) => el.remove());
-            removeElements(document.querySelectorAll(".home"));
+        async fillArtistList(event) {
+            this.ready = false;
+
+            const params = {
+                limit: 20,
+                time_range:
+                    event.target.options[event.target.options.selectedIndex]
+                        .value,
+            };
+            await this.$store.dispatch("spotify/getTopArtists", params);
+            this.setupTopArtists();
         },
         setupTopArtists() {
-            this.loading = false;
-
+            this.artists.splice(0, this.artists.length);
             this.topArtists.items.forEach((artist) => {
                 this.artists.push(artist);
-            });
-            this.artists.sort((a, b) => {
-                return a.popularity - b.popularity;
-            });
-            this.artists.forEach((artist) => {
-                this.options.series[0].data.push(artist.popularity);
-                this.options.yAxis.data.push(artist.name);
             });
 
             this.ready = true;
         },
     },
     async mounted() {
-        const params = { limit: 20, time_range: "long_term"}
+        this.ready = false;
+        
+        const params = {
+            limit: 20,
+            time_range: "short_term",
+        };
         await this.$store.dispatch("spotify/getTopArtists", params);
-        this.resetContent();
         this.setupTopArtists();
     },
 };

@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <p>↓ tracks generated ↓</p>
-                    <div class="columns is-multiline is-mobile pt-3 block-tracks">
+                    <div class="columns is-multiline is-mobile px-0 py-3 block-custom-bg">
                         <div
                             class="column is-2-tablet is-3-mobile"
                             v-for="track in recommendations.tracks"

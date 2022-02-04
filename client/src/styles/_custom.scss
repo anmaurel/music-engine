@@ -106,9 +106,30 @@ footer {
         // margin: 1.2rem 0;
     }
 }
-.block-tracks {
-    background-color: rgba(32, 37, 69, 0.2);
-    padding: 0rem 0.5rem !important;
+.block-custom-bg {
+    background-color: rgba(37, 37, 37, 0.2) !important;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
         rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.is-vcenter {
+    align-items: center !important;
+}
+.border-radius-sm {
+    border-radius: 2px;
+}
+.p-sticker {
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.1rem;
+}
+.p-stickers {
+    padding: 0.1rem 0.2rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.1rem;
+}
+.progress::-webkit-progress-value {
+    transition: width 2s ease;
+}
+progress {
+    transition: all 2s ease;
 }

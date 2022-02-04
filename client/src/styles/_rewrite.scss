@@ -80,3 +80,11 @@ svg.has-text-info {
 svg.has-text-info:hover {
     color: #e9486c !important;
 }
+.card-footer {
+    border-top: none !important;
+    p {
+        overflow-wrap: break-word !important;
+        hyphens: manual !important;
+        line-height: 2 !important;
+    }
+}

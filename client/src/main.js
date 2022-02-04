@@ -15,8 +15,15 @@ import {
     faHistory,
     faLaptopHouse,
     faTabletAlt,
+    faStopwatch,
+    faCircleNotch
 } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faLinkedin, faSpotify, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+    faInstagram,
+    faLinkedin,
+    faSpotify,
+    faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import {
     faFileAudio,
     faIdBadge,
@@ -42,7 +49,9 @@ library.add(
     faListAlt,
     faInstagram,
     faTwitter,
-    faLinkedin
+    faLinkedin,
+    faStopwatch,
+    faCircleNotch,
 );
 
 createApp(App)
@@ -57,7 +66,7 @@ createApp(App)
         {
             config: { id: "UA-156805620-2" },
             appName: "Music Engine",
-            pageTrackerScreenviewEnabled: true
+            pageTrackerScreenviewEnabled: true,
         },
         router
     )
