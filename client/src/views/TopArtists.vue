@@ -50,6 +50,7 @@
                             v-for="(artist, index) in artists"
                             :key="artist.id"
                             v-bind="{
+                                type: type,
                                 index: index + 1,
                                 name: artist.name,
                                 genres: artist.genres,
@@ -77,6 +78,7 @@ export default {
     },
     data() {
         return {
+            type: "artist",
             periods: [
                 { name: "last month", sname: "short_term", id: 1 },
                 { name: "last 6 months", sname: "medium_term", id: 2 },
@@ -114,7 +116,7 @@ export default {
     },
     async mounted() {
         this.ready = false;
-        
+
         const params = {
             limit: 20,
             time_range: "short_term",

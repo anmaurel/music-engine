@@ -16,7 +16,8 @@ import {
     faLaptopHouse,
     faTabletAlt,
     faStopwatch,
-    faCircleNotch
+    faCircleNotch,
+    faPlus
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram,
@@ -29,6 +30,8 @@ import {
     faIdBadge,
     faPlayCircle,
     faListAlt,
+    faClock,
+    faUser as faUserLight,
 } from "@fortawesome/free-regular-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -52,6 +55,9 @@ library.add(
     faLinkedin,
     faStopwatch,
     faCircleNotch,
+    faClock,
+    faUserLight,
+    faPlus
 );
 
 createApp(App)
