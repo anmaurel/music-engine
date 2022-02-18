@@ -5,7 +5,7 @@
                 <img :src="image" :alt="name" />
             </figure>
         </div>
-        <div class="card-content">
+        <div class="card-content px-2 py-4">
             <div class="media">
                 <div
                     class="
@@ -28,16 +28,17 @@
                 </div>
             </div>
         </div>
-        <div class="card-footer is-block">
+        <div class="card-footer is-block p-2">
             <p
-                class="has-text-left has-text-black has-text-weight-medium ml-3"
+                class="has-text-left has-text-black has-text-weight-medium pb-2"
+                v-if="type === 'track'"
                 @mouseover="isArtistHovered = true"
                 @mouseleave="isArtistHovered = false"
             >
                 <span
                     v-if="!isArtistHovered"
                     v-for="(artist, index) in artists"
-                    class="has-background-gradient-1 p-stickers is-inline-block"
+                    class="has-background-gradient-1 p-stickers is-inline-block has-text-white"
                     ><font-awesome-icon
                         :icon="['far', 'user']"
                         v-if="!isTooManyArtist(index)"
@@ -46,14 +47,14 @@
                     />{{ isTooManyArtist(index) ? "" : artist.name
                     }}<font-awesome-icon
                         :icon="['fas', 'plus']"
-                        v-if="index == 3"
+                        v-if="index == 2"
                         size="sm"
                     />
                 </span>
                 <span
                     v-if="isArtistHovered"
                     v-for="artist in artists"
-                    class="has-background-gradient-1 p-stickers is-inline-block"
+                    class="has-background-gradient-1 p-stickers is-inline-block has-text-white"
                     ><font-awesome-icon
                         :icon="['far', 'user']"
                         class="mr-1"
@@ -191,7 +192,7 @@ export default {
             return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
         },
         isTooManyArtist(index) {
-            if (index < 3) {
+            if (index < 2) {
                 return false;
             }
             return true;
