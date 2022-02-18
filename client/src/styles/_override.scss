@@ -3,3 +3,21 @@
         text-align: left !important;
     }
 }
+
+.select select {
+    background-color: transparent !important;
+    border-color: $light !important;
+    color: $light !important;
+}
+.select select option {
+    color: $dark !important;
+    background-color: transparent !important;
+    // background: rgba(0,0,0,0) !important;
+}
+.select select option::selection {
+    color: $dark !important;
+    background-color: transparent !important;
+}
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: $light !important;
+}

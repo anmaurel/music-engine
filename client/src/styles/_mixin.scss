@@ -31,7 +31,11 @@ $directions: (("horizontal", "right"), ("vertical", "top"));
         // -webkit-background-clip: text;
         // -webkit-text-fill-color: transparent;
 
-        background-image: linear-gradient(to #{directionValue}, $secondary, $primary);
+        background-image: linear-gradient(
+            to #{directionValue},
+            $secondary,
+            $primary
+        );
         background-size: 100%;
         background-repeat: repeat;
         -webkit-background-clip: text;
