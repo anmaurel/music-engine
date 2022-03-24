@@ -9,6 +9,8 @@ const state = {
     artist: "",
     recommendations: "",
     playlistGenStatus: "p1",
+    playlistGenStartTracks: [],
+    searchResults: "",
 };
 
 const getters = {
@@ -20,6 +22,8 @@ const getters = {
     getArtist: (state) => state.artist,
     getRecommendations: (state) => state.recommendations,
     getPlaylistGenStatus: (state) => state.playlistGenStatus,
+    getPlaylistGenStartTracks: (state) => state.playlistGenStartTracks,
+    getSearchResults: (state) => state.searchResults,
 };
 
 const mutations = {
@@ -46,6 +50,12 @@ const mutations = {
     },
     SET_PLAYLIST_GEN_STATUS(state, status) {
         state.playlistGenStatus = status;
+    },
+    SET_PLAYLIST_GEN_START_TRACKS(state, tracks) {
+        state.playlistGenStartTracks.push(tracks);
+    },
+    SET_SEARCH_RESULTS(state, results) {
+        state.searchResults = results;
     },
 };
 
@@ -113,6 +123,13 @@ const actions = {
             console.log(error);
         }
     },
+    async setPlaylistGenStartTracks({ commit }, tracks) {
+        try {
+            commit("SET_PLAYLIST_GEN_START_TRACKS", tracks);
+        } catch (error) {
+            console.log(error);
+        }
+    },
     async createPlaylist({ commit }, { user_id, name }) {
         try {
             const response = await api.spotify.createPlaylist(user_id, name);
@@ -124,6 +141,14 @@ const actions = {
     async addItemsPlaylist({ commit }, { playlist_id, uris }) {
         try {
             await api.spotify.addItemsPlaylist(playlist_id, uris);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    async searchItem({ commit }, { q, type, limit }) {
+        try {
+            const response = await api.spotify.searchItem(q, type, limit);
+            commit("SET_SEARCH_RESULTS", response.data);
         } catch (error) {
             console.log(error);
         }

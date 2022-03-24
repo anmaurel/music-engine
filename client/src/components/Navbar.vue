@@ -41,7 +41,7 @@
                         size="sm"
                     />Playlist generation</router-link
                 >
-                <router-link
+                <!-- <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
                     to="/recent-plays"
@@ -51,7 +51,7 @@
                         class="mr-2"
                         size="sm"
                     />Recent plays</router-link
-                >
+                > -->
                 <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
@@ -98,7 +98,7 @@
                     </button>
                 </a>
                 <div v-else class="navbar-item">
-                    <router-link
+                    <!-- <router-link
                         class="navbar-item has-text-white"
                         to="/devices"
                         @click="analyticsLinkClicked('Devices')"
@@ -107,12 +107,12 @@
                             class="mr-2"
                             size="sm"
                         />Devices</router-link
-                    >
+                    > -->
                     <a class="ml-3" @click="logout()">
                         <button
                             class="
                                 button
-                                has-background-gradient-1 has-text-white
+                                has-text-white
                             "
                         >
                             <font-awesome-icon

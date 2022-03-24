@@ -48,7 +48,7 @@ export default {
                         avoidLabelOverlap: false,
                         roseType: "radius",
                         label: {
-                            formatter: "{b|{b}} {d|({d}%)}",
+                            formatter: "{b|{b}}",
                             position: "outer",
                             alignTo: "labelLine",
                             bleedMargin: 5,

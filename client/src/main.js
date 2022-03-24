@@ -17,7 +17,9 @@ import {
     faTabletAlt,
     faStopwatch,
     faCircleNotch,
-    faPlus
+    faPlus,
+    faExclamationCircle,
+    faSearch
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram,
@@ -57,7 +59,9 @@ library.add(
     faCircleNotch,
     faClock,
     faUserLight,
-    faPlus
+    faPlus,
+    faExclamationCircle,
+    faSearch,
 );
 
 createApp(App)

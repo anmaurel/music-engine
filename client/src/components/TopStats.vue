@@ -14,6 +14,7 @@
                         px-1
                         border-radius-sm
                     "
+                    v-if="!playlistGen"
                 >
                     <p class="title is-3 has-text-white">.{{ index }}</p>
                 </div>
@@ -62,7 +63,7 @@
                     />{{ artist.name }}
                 </span>
             </p>
-            <nav class="level is-mobile">
+            <nav class="level is-mobile" v-if="!playlistGen">
                 <div class="level-item has-text-centered">
                     <div v-if="type === 'artist'">
                         <p class="heading has-text-white">followers</p>
@@ -162,17 +163,21 @@
 
 <script>
 export default {
-    props: [
-        "type",
-        "index",
-        "name",
-        "genres",
-        "popularity",
-        "followers",
-        "image",
-        "artists",
-        "duration",
-    ],
+    props: {
+        type: String,
+        playlistGen: {
+            type: Boolean,
+            default: false
+        },
+        index: Number,
+        name: String,
+        genres: Array,
+        popularity: Number,
+        followers: Number,
+        image: String,
+        artists: Array,
+        duration: Number,
+    },
     data() {
         return {
             isNameHovered: false,

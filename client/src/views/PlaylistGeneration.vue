@@ -6,23 +6,75 @@
                     Playlist generation
                 </h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    Generate a playlist with tracks inspired by recently played
-                    tracks.
+                    Allows you to generate a playlist of 30 tracks from your musical preferences.
                 </p>
                 <div class="mt-6" v-if="playlistGenStatus == 'p1'">
-                    <button
-                        id="btnGenerate"
-                        class="
-                            button
-                            is-large
-                            has-background-gradient-1
-                            has-text-weight-medium
-                            has-text-white
-                        "
-                        @click="generateRecommendations()"
-                    >
-                        Generate
-                    </button>
+                    <div class="columns is-centered">
+                        <div class="column is-half">
+                            <p
+                                class="
+                                    is-size-5
+                                    has-text-weight-medium has-text-white
+                                    pb-2
+                                "
+                            >
+                                <font-awesome-icon
+                                    :icon="['fa', 'search']"
+                                    class="mr-1"
+                                    size="md"
+                                />
+                                Select up to 5 tracks that will be used to
+                                generate a playlist
+                            </p>
+                            <SearchAutocomplete />
+                        </div>
+                    </div>
+                    <div v-if="playlistStartTracks.length">
+                        <div class="columns is-multiline is-centered">
+                            <TopStats
+                                class="
+                                    column
+                                    is-2-fullhd
+                                    is-3-widescreen
+                                    is-4-desktop
+                                    is-6-tablet
+                                "
+                                v-for="(track, index) in playlistStartTracks"
+                                :key="track.id"
+                                v-bind="{
+                                    type: type,
+                                    playlistGen: true,
+                                    index: index + 1,
+                                    name: track.name,
+                                    popularity: track.popularity,
+                                    image: track.album.images[0].url,
+                                    artists: track.artists,
+                                    duration: track.duration_ms,
+                                }"
+                            ></TopStats>
+                        </div>
+                        <button
+                            id="btnGenerate"
+                            class="
+                                button
+                                is-large
+                                has-background-gradient-1
+                                has-text-weight-medium
+                                has-text-white
+                                mt-4
+                            "
+                            @click="generateRecommendations()"
+                        >
+                            Generate a playlist
+                        </button>
+                    </div>
+                    <p v-else class="is-size-7 has-text-weight-light">
+                        <font-awesome-icon
+                            :icon="['fa', 'exclamation-circle']"
+                            class="mr-1"
+                            size="sm"
+                        />Please select at least one track
+                    </p>
                 </div>
                 <div
                     class="m-6-tablet my-4-mobile mx-0-mobile"
@@ -38,7 +90,7 @@
                                     v-model="playlistName"
                                     class="input is-medium is-success"
                                     type="text has-text-weight-light"
-                                    placeholder="playlist name"
+                                    placeholder="Playlist name ..."
                                 />
                             </div>
                         </div>
@@ -74,8 +126,18 @@
                             </p>
                         </div>
                     </div>
-                    <p>↓ tracks generated ↓</p>
-                    <div class="columns is-multiline is-mobile px-0 py-3 block-custom-bg">
+                    <p class="is-size-7 has-text-weight-light py-3">
+                        ↓ tracks generated ↓
+                    </p>
+                    <div
+                        class="
+                            columns
+                            is-multiline is-mobile
+                            px-1
+                            py-1
+                            block-custom-bg
+                        "
+                    >
                         <div
                             class="column is-2-tablet is-3-mobile"
                             v-for="track in recommendations.tracks"
@@ -83,6 +145,20 @@
                         >
                             <a class="box" :href="track.uri">
                                 <div class="card">
+                                    <p
+                                        class="
+                                            has-background-dark has-text-white
+                                            is-size-6
+                                            has-text-weight-medium
+                                            py-2
+                                        "
+                                    >
+                                        <font-awesome-icon
+                                            :icon="['far', 'user']"
+                                            class="mr-2"
+                                            size="sm"
+                                        />{{ track.artists[0].name }}
+                                    </p>
                                     <div class="card-image">
                                         <figure class="image is-4by3">
                                             <img
@@ -103,14 +179,21 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import SearchAutocomplete from "@/components/SearchAutocomplete.vue";
+import TopStats from "@/components/TopStats.vue";
 
 import router from "@/router";
 
 export default {
     name: "PlaylistGeneration",
+    components: {
+        SearchAutocomplete,
+        TopStats,
+    },
     data() {
         return {
             playlistName: "",
+            type: "track",
         };
     },
     computed: {
@@ -120,6 +203,7 @@ export default {
             recommendations: "getRecommendations",
             playlistGenStatus: "getPlaylistGenStatus",
             userAuthProfile: "getProfile",
+            playlistStartTracks: "getPlaylistGenStartTracks",
         }),
     },
     methods: {
@@ -128,37 +212,11 @@ export default {
             btnGenerate.setAttribute("disabled", "");
             btnGenerate.classList.add("is-loading");
 
-            await this.$store.dispatch("spotify/getRecentlyPlayed", 20);
+            let tracks = [];
 
-            let tracks = [],
-                artists = [],
-                genres = [];
-
-            this.recentlyPlayed.items.forEach((item) => {
-                tracks.push(item.track.id);
-
-                let artistsGrp = "";
-                let genresGrp = "";
-
-                item.track.artists.forEach(async (artist) => {
-                    artistsGrp = artistsGrp + "," + artist.id;
-
-                    await this.$store.dispatch("spotify/getArtist", artist.id);
-
-                    if (this.artist.genres !== undefined) {
-                        this.artist.genres.forEach((genre) => {
-                            genresGrp = genresGrp + "," + genre;
-                        });
-                    }
-
-                    // console.log(item.track.id + " // " + genresGrp.slice(1));
-                });
-
-                artists.push(artistsGrp.slice(1));
-                genres.push(genresGrp.slice(1));
+            this.playlistStartTracks.forEach((track) => {
+                tracks.push(track.id);
             });
-
-            const tracksShuffled = tracks.sort(() => 0.5 - Math.random());
 
             await this.$store.dispatch("spotify/getRecommendations", {
                 limit: 30,

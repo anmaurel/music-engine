@@ -21,3 +21,9 @@
 .select:not(.is-multiple):not(.is-loading)::after {
     border-color: $light !important;
 }
+.tile.is-vertical .tile.is-child:not(:last-child) {
+    margin-bottom: 0.2rem !important;
+}
+.is-size-7 {
+    font-size: 0.9rem !important;
+}

@@ -1,5 +1,5 @@
 <template>
-    <div id="popup-notif" class="notification">
+    <div id="popup-notif" class="notification has-text-weight-semibold">
         <button class="delete" @click="closePopup"></button>
         {{ popupText }}
     </div>

@@ -53,4 +53,13 @@ export default {
             uris: uris,
         });
     },
+    searchItem: (q, type, limit) => {
+        return req.get("/search", {
+            params: {
+                q,
+                type,
+                limit,
+            },
+        });
+    }
 };
