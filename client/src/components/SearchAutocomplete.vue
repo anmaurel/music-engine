@@ -114,7 +114,7 @@ export default {
         },
         async onChange() {
             const params = {
-                q: `genre:${this.search}`,
+                q: this.search,
                 type: "track",
                 limit: 50,
             };
