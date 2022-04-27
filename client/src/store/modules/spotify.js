@@ -179,6 +179,13 @@ const actions = {
             console.log(error);
         }
     },
+    async removeSavedTracks({ commit }, ids) {
+        try {
+            await api.spotify.removeSavedTracks(ids);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 };
 
 const module = {

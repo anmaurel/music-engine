@@ -76,4 +76,11 @@ export default {
             },
         })
     },
+    removeSavedTracks: (ids) => {
+        return req.delete("/me/tracks", {
+            params: {
+                ids
+            },
+        })
+    },
 };
