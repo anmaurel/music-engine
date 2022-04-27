@@ -61,5 +61,19 @@ export default {
                 limit,
             },
         });
-    }
+    },
+    getPlaylists: (limit) => {
+        return req.get("/me/playlists", {
+            params: {
+                limit
+            },
+        })
+    },
+    getSavedTracks: (limit) => {
+        return req.get("/me/tracks", {
+            params: {
+                limit
+            },
+        })
+    },
 };

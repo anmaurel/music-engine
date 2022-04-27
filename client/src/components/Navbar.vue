@@ -41,17 +41,6 @@
                         size="sm"
                     />Playlist generation</router-link
                 >
-                <!-- <router-link
-                    v-if="isAuth"
-                    class="navbar-item has-text-white is-hidden-mobile"
-                    to="/recent-plays"
-                    @click="analyticsLinkClicked('Recent Plays')"
-                    ><font-awesome-icon
-                        :icon="['far', 'play-circle']"
-                        class="mr-2"
-                        size="sm"
-                    />Recent plays</router-link
-                > -->
                 <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
@@ -73,6 +62,17 @@
                         class="mr-2"
                         size="sm"
                     />Top tracks</router-link
+                >
+                <router-link
+                    v-if="isAuth"
+                    class="navbar-item has-text-white is-hidden-mobile"
+                    to="/recent-plays"
+                    @click="analyticsLinkClicked('Recent Plays')"
+                    ><font-awesome-icon
+                        :icon="['far', 'play-circle']"
+                        class="mr-2"
+                        size="sm"
+                    />Recent plays</router-link
                 >
                 <!-- <router-link
                     v-if="isAuth"

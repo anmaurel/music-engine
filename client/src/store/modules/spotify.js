@@ -11,6 +11,8 @@ const state = {
     playlistGenStatus: "p1",
     playlistGenStartTracks: [],
     searchResults: "",
+    playlists: "",
+    savedTracks: "",
 };
 
 const getters = {
@@ -24,6 +26,8 @@ const getters = {
     getPlaylistGenStatus: (state) => state.playlistGenStatus,
     getPlaylistGenStartTracks: (state) => state.playlistGenStartTracks,
     getSearchResults: (state) => state.searchResults,
+    getPlaylists: (state) => state.playlists,
+    getSavedTracks: (state) => state.savedTracks,
 };
 
 const mutations = {
@@ -57,6 +61,12 @@ const mutations = {
     SET_SEARCH_RESULTS(state, results) {
         state.searchResults = results;
     },
+    SET_PLAYLISTS(state, playlists) {
+        state.playlists = playlists;
+    },
+    SET_SAVED_TRACKS(state, tracks) {
+        state.savedTracks = tracks;
+    }
 };
 
 const actions = {
@@ -149,6 +159,22 @@ const actions = {
         try {
             const response = await api.spotify.searchItem(q, type, limit);
             commit("SET_SEARCH_RESULTS", response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    async getPlaylists({ commit }, limit) {
+        try {
+            const response = await api.spotify.getPlaylists(limit);
+            commit("SET_PLAYLISTS", response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    async getSavedTracks({ commit }, limit) {
+        try {
+            const response = await api.spotify.getSavedTracks(limit);
+            commit("SET_SAVED_TRACKS", response.data);
         } catch (error) {
             console.log(error);
         }
