@@ -19,7 +19,8 @@ import {
     faCircleNotch,
     faPlus,
     faExclamationCircle,
-    faSearch
+    faSearch,
+    faRandom,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram,
@@ -62,6 +63,7 @@ library.add(
     faPlus,
     faExclamationCircle,
     faSearch,
+    faRandom,
 );
 
 createApp(App)

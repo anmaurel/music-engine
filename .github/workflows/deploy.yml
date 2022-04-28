@@ -17,7 +17,7 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.NAS_SSH_HOST}}
+          host: ${{ secrets.NAS_SSH_HOST }}
           username: ${{ secrets.NAS_SSH_USERNAME }}
           password: ${{ secrets.NAS_SSH_PASSWORD }}
           script: |

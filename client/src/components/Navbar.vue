@@ -44,6 +44,17 @@
                 <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
+                    to="/liked-tracks"
+                    @click="analyticsLinkClicked('Liked tracks')"
+                    ><font-awesome-icon
+                        :icon="['fas', 'random']"
+                        class="mr-2"
+                        size="sm"
+                    />Liked tracks</router-link
+                >
+                <router-link
+                    v-if="isAuth"
+                    class="navbar-item has-text-white is-hidden-mobile"
                     to="/top-artists"
                     @click="analyticsLinkClicked('Top artists')"
                     ><font-awesome-icon
@@ -63,7 +74,7 @@
                         size="sm"
                     />Top tracks</router-link
                 >
-                <router-link
+                <!-- <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
                     to="/recent-plays"
@@ -73,7 +84,7 @@
                         class="mr-2"
                         size="sm"
                     />Recent plays</router-link
-                >
+                > -->
                 <!-- <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white"
