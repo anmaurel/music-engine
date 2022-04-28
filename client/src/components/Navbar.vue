@@ -74,7 +74,7 @@
                         size="sm"
                     />Top tracks</router-link
                 >
-                <!-- <router-link
+                <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
                     to="/recent-plays"
@@ -84,7 +84,7 @@
                         class="mr-2"
                         size="sm"
                     />Recent plays</router-link
-                > -->
+                >
                 <!-- <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white"

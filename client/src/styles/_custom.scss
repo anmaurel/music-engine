@@ -141,3 +141,6 @@ progress {
     position: sticky;
     top: 0;
 }
+.drag-over {
+    border: dashed 2px $secondary;
+}

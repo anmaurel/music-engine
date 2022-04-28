@@ -4,17 +4,108 @@
             <div class="container">
                 <h1 class="title is-size-1 has-text-white">Recent plays</h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    The most present artists among the last 20 tracks listened
+                    History of the last 50 tracks listened to and classification
+                    by artists present
                 </p>
-                <ECharts
-                    v-if="ready"
-                    ref="chart"
-                    :option="chartOptionsBar"
-                    :setOptionOpts="{ notMerge: true }"
-                    :loading="loading"
-                    :loadingOpts="{ text: 'Wait for 0.5s' }"
-                    style="width: 100%; height: 600px"
-                />
+                <div class="mt-6">
+                    <font-awesome-icon
+                        :icon="['fas', 'circle-notch']"
+                        size="2x"
+                        spin
+                        v-if="!ready"
+                    />
+                    <div class="columns" v-if="ready">
+                        <div class="column is-6 px-6">
+                            <div
+                                class="card mb-2 block-custom-bg"
+                                v-for="(played, index) in recentlyPlayed.items"
+                                :key="played.track.id"
+                            >
+                                <div class="card-content p-2">
+                                    <div class="media">
+                                        <div
+                                            class="
+                                                media-left
+                                                has-text-left has-text-white
+                                            "
+                                        >
+                                            <p>
+                                                {{
+                                                    dateFormat(
+                                                        played.played_at
+                                                    )[1]
+                                                }}
+                                            </p>
+                                            <p>
+                                                {{
+                                                    dateFormat(
+                                                        played.played_at
+                                                    )[0]
+                                                }}
+                                            </p>
+                                        </div>
+                                        <div class="media-content">
+                                            <p
+                                                class="
+                                                    title
+                                                    is-4
+                                                    has-text-white
+                                                    pb-1
+                                                "
+                                            >
+                                                {{ played.track.name }}
+                                            </p>
+                                            <p
+                                                class="
+                                                    subtitle
+                                                    is-7
+                                                    has-text-white
+                                                "
+                                            >
+                                                <span
+                                                    v-for="(
+                                                        artist, index
+                                                    ) in played.track.artists"
+                                                    :key="artist.id"
+                                                    class="
+                                                        has-background-gradient-1
+                                                        p-stickers
+                                                        is-inline-block
+                                                        has-text-white
+                                                        py-1
+                                                        px-2
+                                                    "
+                                                    ><font-awesome-icon
+                                                        :icon="['far', 'user']"
+                                                        class="mr-1"
+                                                        size="sm"
+                                                    />{{ artist.name }}
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <ECharts
+                                class="block-custom-bg"
+                                v-if="ready"
+                                ref="chart"
+                                :option="chartOptionsBar"
+                                :setOptionOpts="{ notMerge: true }"
+                                :loadingOpts="{ text: 'Wait for 0.5s' }"
+                                style="width: 100%; height: 600px"
+                            />
+                            <!-- <p
+                                v-for="(artist, index) in artistsCount"
+                                :key="artist.name"
+                            >
+                                {{ artist.value }} {{ artist.name }}
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -35,41 +126,30 @@ export default {
         return {
             ready: false,
             loading: false,
+            artistsCount: [],
             chartOptionsBar: markRaw({
-                tooltip: {
-                    trigger: "item",
-                    formatter: "{a} <br/>{b}: {c} ({d}%)",
+                textStyle: {
+                    fontFamily: "Poppins",
+                },
+                dataset: {
+                    source: [["amount", "artist"]],
+                },
+                grid: { containLabel: true },
+                xAxis: { type: "value" },
+                yAxis: {
+                    type: "category",
+                    axisLabel: {
+                        color: "rgba(255, 255, 255, 1)",
+                        fontWeight: "bold",
+                        fontSize: "16",
+                    },
                 },
                 series: [
                     {
-                        name: "Recent plays",
-                        type: "pie",
-                        radius: ["20%", "70%"],
-                        avoidLabelOverlap: false,
-                        roseType: "radius",
-                        label: {
-                            formatter: "{b|{b}}",
-                            position: "outer",
-                            alignTo: "labelLine",
-                            bleedMargin: 5,
-                            color: "rgba(255, 255, 255, 1)",
-
-                            rich: {
-                                b: {
-                                    color: "#fff",
-                                    fontSize: "18",
-                                    fontWeight: "600",
-                                    fontFamily: "Poppins",
-                                    lineHeight: 33,
-                                },
-                                d: {
-                                    color: "#fff",
-                                    fontSize: "14",
-                                    fontWeight: "600",
-                                    fontFamily: "Poppins",
-                                    lineHeight: 33,
-                                },
-                            },
+                        type: "bar",
+                        encode: {
+                            x: "amount",
+                            y: "artist",
                         },
                         labelLine: {
                             lineStyle: {
@@ -84,7 +164,7 @@ export default {
                                 type: "linear",
                                 x: 0,
                                 y: 0,
-                                x2: 0,
+                                x2: 1,
                                 y2: 1,
                                 colorStops: [
                                     {
@@ -98,13 +178,9 @@ export default {
                                 ],
                                 global: false,
                             },
-                            borderColor: "#fff",
-                            borderWidth: 1,
-                            borderType: "solid",
                             shadowBlur: 200,
                             shadowColor: "rgba(0, 0, 0, 0.5)",
                         },
-                        data: [],
                     },
                 ],
             }),
@@ -114,6 +190,16 @@ export default {
         ...mapGetters("spotify", { recentlyPlayed: "getRecentlyPlayed" }),
     },
     methods: {
+        dateFormat(dateString) {
+            let result = [];
+
+            const dateSplit1 = dateString.split("T");
+            result.push(dateSplit1[0]);
+            const dateSplit2 = dateSplit1[1].split(".");
+            result.push(dateSplit2[0]);
+
+            return result;
+        },
         resetContent() {
             const removeElements = (elms) => elms.forEach((el) => el.remove());
             removeElements(document.querySelectorAll(".home"));
@@ -136,29 +222,36 @@ export default {
             );
 
             withoutDuplicatesData.forEach((element) => {
-                this.chartOptionsBar.series[0].data.push({
+                this.artistsCount.push({
                     value: 1,
                     name: element,
                 });
             });
 
             duplicatesData.forEach((element) => {
-                this.chartOptionsBar.series[0].data.forEach((elem) => {
+                this.artistsCount.forEach((elem) => {
                     if (elem["name"] === element) {
                         elem["value"]++;
                     }
                 });
             });
 
-            this.chartOptionsBar.series[0].data.sort((a, b) => {
-                return b.value - a.value;
+            this.artistsCount.sort((a, b) => {
+                return a.value - b.value;
+            });
+
+            this.artistsCount.forEach((artist) => {
+                this.chartOptionsBar.dataset.source.push([
+                    artist.value,
+                    artist.name,
+                ]);
             });
 
             this.ready = true;
         },
     },
     async mounted() {
-        await this.$store.dispatch("spotify/getRecentlyPlayed", 20);
+        await this.$store.dispatch("spotify/getRecentlyPlayed", 50);
         this.resetContent();
         this.setupRecentlyPayed();
     },
