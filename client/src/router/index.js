@@ -52,12 +52,12 @@ const routes = [
         component: PlaylistGeneration,
         meta: { requiresAuth: false },
     },
-    {
-        path: "/liked-tracks",
-        name: "LikedTracks",
-        component: LikedTracks,
-        meta: { requiresAuth: true },
-    },
+    // {
+    //     path: "/liked-tracks",
+    //     name: "LikedTracks",
+    //     component: LikedTracks,
+    //     meta: { requiresAuth: true },
+    // },
     {
         path: "/:catchAll(.*)",
         name: "NotFound",

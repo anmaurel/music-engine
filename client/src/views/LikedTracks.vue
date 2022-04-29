@@ -134,6 +134,9 @@ export default {
         }),
     },
     methods: {
+        nonDragZone() {
+            return false;
+        },
         dragStart(event) {
             event.dataTransfer.setData("text/plain", event.target.id);
             setTimeout(() => {

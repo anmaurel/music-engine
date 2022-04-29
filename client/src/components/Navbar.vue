@@ -41,7 +41,7 @@
                         size="sm"
                     />Playlist generation</router-link
                 >
-                <router-link
+                <!-- <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
                     to="/liked-tracks"
@@ -51,7 +51,7 @@
                         class="mr-2"
                         size="sm"
                     />Liked tracks</router-link
-                >
+                > -->
                 <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
