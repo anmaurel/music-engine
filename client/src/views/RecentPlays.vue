@@ -14,6 +14,23 @@
                         v-if="!ready"
                     />
                     <div class="columns" v-if="ready">
+                        <div class="column is-6">
+                            <ECharts
+                                class="block-custom-bg"
+                                v-if="ready"
+                                ref="chart"
+                                :option="chartOptionsBar"
+                                :setOptionOpts="{ notMerge: true }"
+                                :loadingOpts="{ text: 'Wait for 0.5s' }"
+                                style="width: 100%; height: 600px"
+                            />
+                            <!-- <p
+                                v-for="(artist, index) in artistsCount"
+                                :key="artist.name"
+                            >
+                                {{ artist.value }} {{ artist.name }}
+                            </p> -->
+                        </div>
                         <div class="column is-6 px-6">
                             <div
                                 class="card mb-2 block-custom-bg"
@@ -86,23 +103,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column is-6 is-hidden-mobile">
-                            <ECharts
-                                class="block-custom-bg"
-                                v-if="ready"
-                                ref="chart"
-                                :option="chartOptionsBar"
-                                :setOptionOpts="{ notMerge: true }"
-                                :loadingOpts="{ text: 'Wait for 0.5s' }"
-                                style="width: 100%; height: 600px"
-                            />
-                            <!-- <p
-                                v-for="(artist, index) in artistsCount"
-                                :key="artist.name"
-                            >
-                                {{ artist.value }} {{ artist.name }}
-                            </p> -->
-                        </div>
                     </div>
                 </div>
             </div>
@@ -137,6 +137,8 @@ export default {
                 xAxis: { type: "value" },
                 yAxis: {
                     type: "category",
+                    max: 12,
+                    inverse: true,
                     axisLabel: {
                         color: "rgba(255, 255, 255, 1)",
                         fontWeight: "bold",
@@ -236,7 +238,7 @@ export default {
             });
 
             this.artistsCount.sort((a, b) => {
-                return a.value - b.value;
+                return b.value - a.value;
             });
 
             this.artistsCount.forEach((artist) => {
@@ -247,6 +249,7 @@ export default {
             });
 
             this.ready = true;
+            console.log(this.chartOptionsBar.dataset.source);
         },
     },
     async mounted() {
