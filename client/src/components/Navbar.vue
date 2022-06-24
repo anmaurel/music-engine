@@ -43,7 +43,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white is-hidden-mobile"
+                    class="navbar-item has-text-white is-hidden"
                     to="/liked-tracks"
                     @click="analyticsLinkClicked('Liked tracks')"
                     ><font-awesome-icon
