@@ -1,11 +1,11 @@
-$breakpoints: (
+$breakpts: (
     "mobile": 769px,
     "tablet": 1024px,
     "desktop": 1216px,
     "widescreen": 1408px,
 );
 @mixin setup($width, $type: min) {
-    @each $breakpoint, $size in $breakpoints {
+    @each $breakpoint, $size in $breakpts {
         @if $width == $breakpoint {
             @media only screen and (#{$type}-width: $size) {
                 @content;
