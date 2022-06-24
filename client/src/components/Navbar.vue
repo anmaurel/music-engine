@@ -54,7 +54,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white is-hidden-mobile"
+                    class="navbar-item has-text-white"
                     to="/top-artists"
                     @click="analyticsLinkClicked('Top artists')"
                     ><font-awesome-icon
@@ -65,7 +65,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white is-hidden-mobile"
+                    class="navbar-item has-text-white"
                     to="/top-tracks"
                     @click="analyticsLinkClicked('Top tracks')"
                     ><font-awesome-icon
@@ -76,7 +76,7 @@
                 >
                 <router-link
                     v-if="isAuth"
-                    class="navbar-item has-text-white is-hidden-mobile"
+                    class="navbar-item has-text-white"
                     to="/recent-plays"
                     @click="analyticsLinkClicked('Recent Plays')"
                     ><font-awesome-icon
@@ -97,7 +97,7 @@
                 > -->
             </div>
             <div class="navbar-end">
-                <div class="navbar-item is-hidden-touch">
+                <div class="navbar-item">
                     <div class="locale-changer select is-small is-info">
                         <select
                             v-model="$i18n.locale"

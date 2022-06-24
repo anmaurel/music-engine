@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column is-6">
+                        <div class="column is-6 is-hidden-mobile">
                             <ECharts
                                 class="block-custom-bg"
                                 v-if="ready"
