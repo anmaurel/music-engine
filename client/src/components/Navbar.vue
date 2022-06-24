@@ -109,7 +109,7 @@
                                 :key="`Lang${i}`"
                                 :value="lang"
                             >
-                                {{ lang }}
+                                {{ displayLanguageFlag(lang) }}
                             </option>
                         </select>
                     </div>
@@ -180,6 +180,14 @@ export default {
         },
         onChangeLanguage(event) {
             localStorage.lang = event.target.value
+        },
+        displayLanguageFlag(lang) {
+            switch (lang) {
+                case "fr":
+                    return "🇫🇷"
+                case "en":
+                    return "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+            }
         }
     },
     mounted() {
