@@ -5,15 +5,22 @@ $breakpoints: (
     "widescreen": 1408px,
 );
 @mixin setup($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media only screen and (#{$type}-width: $width) {
-            @content;
+    @each $breakpoint, $size in $breakpoints {
+        @if $width == $breakpoint {
+            @media only screen and (#{$type}-width: $size) {
+                @content;
+            }
         }
     }
+    // @if map_has_key($breakpoints, $width) {
+    //     $width: map_get($breakpoints, $width);
+    //     @if $type == max {
+    //         $width: $width - 1px;
+    //     }
+    //     @media only screen and (#{$type}-width: $width) {
+    //         @content;
+    //     }
+    // }
 }
 
 $directions: (("horizontal", "right"), ("vertical", "top"));
