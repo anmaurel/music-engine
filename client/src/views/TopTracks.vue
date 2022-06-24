@@ -2,10 +2,9 @@
     <section class="hero">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title is-size-1 has-text-white">Top tracks</h1>
+                <h1 class="title is-size-1 has-text-white">{{ $t("menu.links[4]") }}</h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    The top 20 most listened tracks filtered by period and
-                    classified by number of listenings
+                    {{ $t("views.topTracks.title") }}
                 </p>
 
                 <div class="control mt-6 mb-5">
@@ -73,9 +72,9 @@ export default {
         return {
             type: "track",
             periods: [
-                { name: "last month", sname: "short_term", id: 1 },
-                { name: "last 6 months", sname: "medium_term", id: 2 },
-                { name: "all time", sname: "long_term", id: 3 },
+                { name: this.$t("views.topTracks.periods[0]"), sname: "short_term", id: 1 },
+                { name: this.$t("views.topTracks.periods[1]"), sname: "medium_term", id: 2 },
+                { name: this.$t("views.topTracks.periods[2]"), sname: "long_term", id: 3 },
             ],
             periodSelected: "short_term",
             tracks: [],

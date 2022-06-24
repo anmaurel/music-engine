@@ -2,10 +2,9 @@
     <section class="hero">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title is-size-1 has-text-white">Recent plays</h1>
+                <h1 class="title is-size-1 has-text-white">{{ $t("menu.links[5]") }}</h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    History of the last 50 tracks listened to and classification
-                    by artists present
+                    {{ $t("views.recentPlays.title") }}
                 </p>
                 <div class="mt-6">
                     <font-awesome-icon

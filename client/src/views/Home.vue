@@ -50,7 +50,7 @@
                                 "
                             >
                                 <span class="has-text-primary-gradient"
-                                    >Spotify</span
+                                    >{{ $t("home.blocks[0].title") }}</span
                                 >
                             </p>
                             <p
@@ -65,7 +65,7 @@
                                 "
                             >
                                 <span class="has-text-primary-gradient"
-                                    >Data</span
+                                    >{{ $t("home.blocks[0].categorie") }}</span
                                 >
                             </p>
                         </div>
@@ -74,12 +74,7 @@
                                 is-size-5
                                 has-text-weight-normal has-text-justified
                             "
-                        >
-                            Music Engine is a free online platform that offering
-                            playlist generation and data visualization of music
-                            listening statistics. All the data comes from the
-                            Spotify web api.
-                        </p>
+                        >{{ $t("home.blocks[0].content") }}</p>
                     </div>
                 </div>
             </div>
@@ -105,7 +100,7 @@
                                 "
                             >
                                 <span class="has-text-primary-gradient"
-                                    >Playlist generation</span
+                                    >{{ $t("home.blocks[1].title") }}</span
                                 >
                             </p>
                             <p
@@ -120,7 +115,7 @@
                                 "
                             >
                                 <span class="has-text-primary-gradient"
-                                    >Functionality</span
+                                    >{{ $t("home.blocks[1].categorie") }}</span
                                 >
                             </p>
                         </div>
@@ -129,14 +124,7 @@
                                 is-size-5
                                 has-text-weight-normal has-text-justified
                             "
-                        >
-                            The playlist generation is based on the last 20
-                            tracks listened to generate 30 tracks based on
-                            categories, artists, spotify recommendations and
-                            release dates. This system allows to generate
-                            playlists perfectly adapted to the users and their
-                            musical tastes.
-                        </p>
+                        >{{ $t("home.blocks[1].content") }}</p>
                     </div>
                     <div
                         data-onscroll
@@ -194,7 +182,7 @@
                                 "
                             >
                                 <span class="has-text-primary-gradient"
-                                    >Data visualization</span
+                                    >{{ $t("home.blocks[2].title") }}</span
                                 >
                             </p>
                             <p
@@ -209,7 +197,7 @@
                                 "
                             >
                                 <span class="has-text-primary-gradient"
-                                    >Functionality</span
+                                    >{{ $t("home.blocks[2].categorie") }}</span
                                 >
                             </p>
                         </div>
@@ -218,13 +206,7 @@
                                 is-size-5
                                 has-text-weight-normal has-text-justified
                             "
-                        >
-                            Music Engine offers several kinds of data
-                            visualization in order to provide to the user an
-                            easily readable and understandable overview of his
-                            music data. Among these graphs, we find the recent
-                            listens, the top artists and the top tracks.
-                        </p>
+                        >{{ $t("home.blocks[2].content") }}</p>
                     </div>
                 </div>
             </div>
@@ -253,8 +235,7 @@
                                     class="mr-2"
                                     size="sm"
                                 /> -->
-                                → Login with Spotify ←
-                            </button>
+                                {{ $t("home.login") }}</button>
                         </a>
                     </div>
                 </div>

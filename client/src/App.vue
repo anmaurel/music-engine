@@ -21,6 +21,9 @@ export default {
     },
     computed: {
         ...mapGetters("app", { popupStatus: "getPopupStatus" }),
+    },
+    mounted() {
+        if(localStorage.lang != null) this.$i18n.locale = localStorage.lang; 
     }
 };
 </script>

@@ -3,10 +3,10 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title is-size-1 has-text-white">
-                    Playlist generation
+                    {{ $t("menu.links[1]") }}
                 </h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    Allows you to generate a playlist of 30 tracks from your musical preferences.
+                    {{ $t("views.playlist.generation.subtitle") }}
                 </p>
                 <div class="mt-6" v-if="playlistGenStatus == 'p1'">
                     <div class="columns is-centered">
@@ -23,8 +23,7 @@
                                     class="mr-1"
                                     size="md"
                                 />
-                                Select up to 5 tracks that will be used to
-                                generate a playlist
+                                {{ $t("views.playlist.generation.search.desc") }}
                             </p>
                             <SearchAutocomplete />
                         </div>
@@ -65,7 +64,7 @@
                             "
                             @click="generateRecommendations()"
                         >
-                            Generate a playlist
+                            {{ $t("views.playlist.generation.search.btn") }}
                         </button>
                     </div>
                     <p v-else class="is-size-7 has-text-weight-light">
@@ -73,7 +72,7 @@
                             :icon="['fa', 'exclamation-circle']"
                             class="mr-1"
                             size="sm"
-                        />Please select at least one track
+                        />{{ $t("views.playlist.generation.search.info") }}
                     </p>
                 </div>
                 <div
@@ -107,7 +106,7 @@
                                     "
                                     @click="createPlaylist(playlistName)"
                                 >
-                                    Create playlist
+                                    {{ $t("views.playlist.creation.btnCreation") }}
                                 </button>
                                 <button
                                     id="btnGenerate"
@@ -121,13 +120,13 @@
                                     "
                                     @click="generateRecommendations()"
                                 >
-                                    Regenerate
+                                    {{ $t("views.playlist.creation.btnRegen") }}
                                 </button>
                             </p>
                         </div>
                     </div>
                     <p class="is-size-7 has-text-weight-light py-3">
-                        ↓ tracks generated ↓
+                        {{ $t("views.playlist.creation.info") }}
                     </p>
                     <div
                         class="

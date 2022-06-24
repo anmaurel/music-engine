@@ -1,0 +1,61 @@
+{
+    "menu": {
+        "links": ["Home", "Génération de playlist", "Titres likés", "Top artistes", "Top titres", "Écoutes récentes"],
+        "buttons": ["Connexion", "Déconnexion"]
+    },
+    "home": {
+        "blocks": [
+            {
+                "title": "Spotify",
+                "categorie" : "Donnée",
+                "content": "Music Engine est une plateforme en ligne gratuite qui propose la génération de playlists et la visualisation de ses statistiques d'écoute de musique. L'ensemble des données proviennent de l'api web Spotify."
+            },
+            {
+                "title": "Géneration de playlist",
+                "categorie" : "Fonctionalitée",
+                "content": "La génération de playlists utilise les 5 titres maximum fournis par l'utilisateur pour trouver des titres similaires et générer une playlist adaptée."
+            },
+            {
+                "title": "Visualisation des données",
+                "categorie" : "Fonctionalitée",
+                "content": "Music Engine propose plusieurs types de visualisation de données afin de fournir à l'utilisateur un aperçu facilement lisible et compréhensible de ses données musicales. Parmi ces graphiques, on trouve les écoutes récentes, le top des artistes et le top des morceaux."
+            }
+        ],
+        "login": "→ Connexion avec Spotify ←"
+    },
+    "footer": {
+        "copyright": "Copyright © 2022 - Tous droits réservés",
+        "social": "Partager sur les réseaux sociaux"
+    },
+    "views": {
+        "playlist": {
+            "generation": {
+                "subtitle": "Permet de générer une liste de lecture de 30 titres à partir des titres sélectionnées.",
+                "search": {
+                    "desc": "Sélectionnez jusqu'à 5 titres qui seront utilisées pour générer une playlist.",
+                    "info": "Veuillez choisir au moins un titre",
+                    "btn": "Générer une playlist"
+                }
+            },
+            "creation": {
+                "btnCreation": "Créer une playlist",
+                "btnRegen": "Régénérer",
+                "info": "↓ titres générées ↓"
+            }
+        },
+        "likedTracks": {
+            "title": "Permet de transférer des titres likés vers vos propres playlists avec un système de drag & drop"
+        },
+        "topArtists": {
+            "title": "Vos 20 artistes les plus écoutés, filtrés par période et classés par nombre d'écoutes.",
+            "periods": ["dernier mois", "6 derniers mois", "tout le temps"]
+        },
+        "topTracks": {
+            "title": "Vos 20 titres les plus écoutés, filtrés par période et classés par nombre d'écoutes.",
+            "periods": ["dernier mois", "6 derniers mois", "tout le temps"]
+        },
+        "recentPlays": {
+            "title": "Historique des 50 derniers titres écoutés et classement par artistes présents."
+        }
+    }
+}

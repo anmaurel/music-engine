@@ -3,7 +3,7 @@
         <hr class="hr-foot" />
         <div class="columns is-centered py-4">
             <div class="column is-3">
-                <p class="has-text-weight-semibold">Copyright © 2021 - All rights reserved</p>
+                <p class="has-text-weight-semibold">{{ $t("footer.copyright") }}</p>
             </div>
             <div class="column is-3">
                 <img
@@ -14,7 +14,7 @@
             </div>
             <div class="column is-3">
                 <p class="has-text-weight-semibold">
-                    Share on social media
+                    {{ $t("footer.social") }}
                     <a href="https://www.instagram.com/p/CXdjarbMjn8/?utm_medium=share_sheet">
                         <font-awesome-icon
                             :icon="['fab', 'instagram']"

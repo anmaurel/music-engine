@@ -2,10 +2,9 @@
     <section class="hero">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title is-size-1 has-text-white">Liked tracks</h1>
+                <h1 class="title is-size-1 has-text-white">{{ $t("menu.links[2]") }}</h1>
                 <p class="subtitle has-text-weight-light has-text-white">
-                    Allows you to switch from liked tracks to your own playlists
-                    with a drag & drop system
+                    {{ $t("views.likedTracks.title") }}
                 </p>
                 <div class="mt-6">
                     <div class="columns">

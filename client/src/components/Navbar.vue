@@ -28,7 +28,7 @@
                         :icon="['fas', 'laptop-house']"
                         class="mr-2"
                         size="sm"
-                    />Home</router-link
+                    />{{ $t("menu.links[0]") }}</router-link
                 >
                 <router-link
                     v-if="isAuth"
@@ -39,9 +39,9 @@
                         :icon="['far', 'list-alt']"
                         class="mr-2"
                         size="sm"
-                    />Playlist generation</router-link
+                    />{{ $t("menu.links[1]") }}</router-link
                 >
-                <!-- <router-link
+                <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
                     to="/liked-tracks"
@@ -50,8 +50,8 @@
                         :icon="['fas', 'random']"
                         class="mr-2"
                         size="sm"
-                    />Liked tracks</router-link
-                > -->
+                    />{{ $t("menu.links[2]") }}</router-link
+                >
                 <router-link
                     v-if="isAuth"
                     class="navbar-item has-text-white is-hidden-mobile"
@@ -61,7 +61,7 @@
                         :icon="['far', 'id-badge']"
                         class="mr-2"
                         size="sm"
-                    />Top artists</router-link
+                    />{{ $t("menu.links[3]") }}</router-link
                 >
                 <router-link
                     v-if="isAuth"
@@ -72,7 +72,7 @@
                         :icon="['far', 'file-audio']"
                         class="mr-2"
                         size="sm"
-                    />Top tracks</router-link
+                    />{{ $t("menu.links[4]") }}</router-link
                 >
                 <router-link
                     v-if="isAuth"
@@ -83,7 +83,7 @@
                         :icon="['far', 'play-circle']"
                         class="mr-2"
                         size="sm"
-                    />Recent plays</router-link
+                    />{{ $t("menu.links[5]") }}</router-link
                 >
                 <!-- <router-link
                     v-if="isAuth"
@@ -97,6 +97,23 @@
                 > -->
             </div>
             <div class="navbar-end">
+                <div class="navbar-item is-hidden-touch">
+                    <div class="locale-changer select is-small is-info">
+                        <select
+                            v-model="$i18n.locale"
+                            class="has-text-weight-bold"
+                            @change="onChangeLanguage"
+                        >
+                            <option
+                                v-for="(lang, i) in $i18n.availableLocales"
+                                :key="`Lang${i}`"
+                                :value="lang"
+                            >
+                                {{ lang }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
                 <a v-if="!isAuth" class="navbar-item" :href="`${loginUrl}`">
                     <button
                         class="button has-background-gradient-1 has-text-white"
@@ -105,7 +122,7 @@
                             :icon="['fab', 'spotify']"
                             class="mr-2"
                             size="sm"
-                        />Login
+                        />{{ $t("menu.buttons[0]") }}
                     </button>
                 </a>
                 <div v-else class="navbar-item">
@@ -130,7 +147,7 @@
                                 :icon="['fab', 'spotify']"
                                 class="mr-2"
                                 size="sm"
-                            />Logout
+                            />{{ $t("menu.buttons[1]") }}
                         </button>
                     </a>
                 </div>
@@ -161,6 +178,9 @@ export default {
                 value: 1,
             });
         },
+        onChangeLanguage(event) {
+            localStorage.lang = event.target.value
+        }
     },
     mounted() {
         if (window.localStorage.getItem("spotify_access_token") !== null) {

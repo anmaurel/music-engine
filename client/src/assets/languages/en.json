@@ -1,0 +1,61 @@
+{
+    "menu": {
+        "links": ["Home", "Playlist generation", "Liked tracks", "Top artists", "Top tracks", "Recent Plays"],
+        "buttons": ["Login", "Logout"]
+    },
+    "home": {
+        "blocks": [
+            {
+                "title": "Spotify",
+                "categorie" : "Data",
+                "content": "Music Engine is a free online platform that offering playlist generation and data visualization of music listening statistics. All the data comes from the Spotify web api."
+            },
+            {
+                "title": "Playlist generation",
+                "categorie" : "Functionality",
+                "content": "The playlist generation uses the maximum of 5 tracks provided by the user to find similar tracks and generate a suitable playlist."
+            },
+            {
+                "title": "Data visualization",
+                "categorie" : "Functionality",
+                "content": "Music Engine offers several kinds of data visualization in order to provide to the user an easily readable and understandable overview of his music data. Among these graphs, we find the recent listens, the top artists and the top tracks."
+            }
+        ],
+        "login": "→ Login with Spotify ←"
+    },
+    "footer": {
+        "copyright": "Copyright © 2022 - All rights reserved",
+        "social": "Share on social media"
+    },
+    "views": {
+        "playlist": {
+            "generation": {
+                "subtitle": "Allows you to generate a playlist of 30 tracks from the selected tracks.",
+                "search": {
+                    "desc": "Select up to 5 tracks that will be used to generate a playlist",
+                    "info": "Please select at least one track",
+                    "btn": "Generate a playlist"
+                }
+            },
+            "creation": {
+                "btnCreation": "Create playlist",
+                "btnRegen": "Regenerate",
+                "info": "↓ tracks generated ↓"
+            }
+        },
+        "likedTracks": {
+            "title": "Allows you to switch from liked tracks to your own playlists with a drag & drop system"
+        },
+        "topArtists": {
+            "title": "Your top 20 most listened artists filtered by period and classified by number of listenings.",
+            "periods": ["last month", "last 6 months", "all time"]
+        },
+        "topTracks": {
+            "title": "Your top 20 most listened tracks filtered by period and classified by number of listenings.",
+            "periods": ["last month", "last 6 months", "all time"]
+        },
+        "recentPlays": {
+            "title": "History of the last 50 tracks listened to and classification by artists present."
+        }
+    }
+}

@@ -39,6 +39,7 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueGtag from "vue-gtag";
+import i18n from "./utils/i18n";
 
 import "./styles/main.scss";
 
@@ -70,6 +71,7 @@ createApp(App)
     .component("font-awesome-icon", FontAwesomeIcon)
     .use(store)
     .use(router)
+    .use(i18n)
     .use(VueAxios, axios)
     .use(LoadScript)
     .use(plugin, { echarts, h })
