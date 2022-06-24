@@ -186,7 +186,7 @@ export default {
                 case "fr":
                     return "🇫🇷"
                 case "en":
-                    return "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+                    return "🇬🇧"
             }
         }
     },
